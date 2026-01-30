@@ -13,7 +13,6 @@ import { getEvalRunCellValueBasedOnColumn } from './ExperimentEvaluationRunsTabl
 import type { RunEntityOrGroupData } from './ExperimentEvaluationRunsPage.utils';
 import type { ExperimentEvaluationRunsPageMode } from './hooks/useExperimentEvaluationRunsPageMode';
 import { useExperimentEvaluationRunsRowVisibility } from './hooks/useExperimentEvaluationRunsRowVisibility';
-import { shouldEnableImprovedEvalRunsComparison } from '../../../common/utils/FeatureUtils';
 
 export interface ExperimentEvaluationRunsTableProps {
   data: RunEntityOrGroupData[];
@@ -29,6 +28,7 @@ export interface ExperimentEvaluationRunsTableProps {
   setIsDrawerOpen: (isOpen: boolean) => void;
   viewMode: ExperimentEvaluationRunsPageMode;
   onScroll?: React.UIEventHandler<HTMLDivElement>;
+  isGrouped?: boolean;
 }
 
 export const ExperimentEvaluationRunsTable = forwardRef<HTMLDivElement, ExperimentEvaluationRunsTableProps>(
@@ -48,6 +48,7 @@ export const ExperimentEvaluationRunsTable = forwardRef<HTMLDivElement, Experime
       setIsDrawerOpen,
       viewMode,
       onScroll,
+      isGrouped,
     },
     ref,
   ) => {
@@ -56,9 +57,7 @@ export const ExperimentEvaluationRunsTable = forwardRef<HTMLDivElement, Experime
     const { isRowHidden } = useExperimentEvaluationRunsRowVisibility();
 
     const columns = useMemo(() => {
-      const allColumns = getExperimentEvalRunsDefaultColumns(viewMode, {
-        showCheckbox: shouldEnableImprovedEvalRunsComparison(),
-      });
+      const allColumns = getExperimentEvalRunsDefaultColumns(viewMode);
 
       // add a column for each available metric
       uniqueColumns.forEach((column) => {
@@ -166,6 +165,7 @@ export const ExperimentEvaluationRunsTable = forwardRef<HTMLDivElement, Experime
                 isExpanded={row.getIsExpanded()}
                 isHidden={isRowHidden(row.id, row.index, runStatus)}
                 columns={columns}
+                isGrouped={isGrouped}
               />
             );
           })}
