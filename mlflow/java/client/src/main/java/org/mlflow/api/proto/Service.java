@@ -253533,6 +253533,2911 @@ public final class Service {
 
   }
 
+  public interface GetPromptOptimizationJobOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mlflow.GetPromptOptimizationJob)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The unique identifier of the optimization job (same as run_id).
+     * </pre>
+     *
+     * <code>optional string job_id = 1;</code>
+     * @return Whether the jobId field is set.
+     */
+    boolean hasJobId();
+    /**
+     * <pre>
+     * The unique identifier of the optimization job (same as run_id).
+     * </pre>
+     *
+     * <code>optional string job_id = 1;</code>
+     * @return The jobId.
+     */
+    java.lang.String getJobId();
+    /**
+     * <pre>
+     * The unique identifier of the optimization job (same as run_id).
+     * </pre>
+     *
+     * <code>optional string job_id = 1;</code>
+     * @return The bytes for jobId.
+     */
+    com.google.protobuf.ByteString
+        getJobIdBytes();
+  }
+  /**
+   * Protobuf type {@code mlflow.GetPromptOptimizationJob}
+   */
+  public static final class GetPromptOptimizationJob extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:mlflow.GetPromptOptimizationJob)
+      GetPromptOptimizationJobOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetPromptOptimizationJob.newBuilder() to construct.
+    private GetPromptOptimizationJob(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetPromptOptimizationJob() {
+      jobId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetPromptOptimizationJob();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetPromptOptimizationJob(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              jobId_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.mlflow.api.proto.Service.internal_static_mlflow_GetPromptOptimizationJob_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.mlflow.api.proto.Service.internal_static_mlflow_GetPromptOptimizationJob_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.mlflow.api.proto.Service.GetPromptOptimizationJob.class, org.mlflow.api.proto.Service.GetPromptOptimizationJob.Builder.class);
+    }
+
+    public interface ResponseOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:mlflow.GetPromptOptimizationJob.Response)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * The optimization job details.
+       * </pre>
+       *
+       * <code>optional .mlflow.PromptOptimizationJob job = 1;</code>
+       * @return Whether the job field is set.
+       */
+      boolean hasJob();
+      /**
+       * <pre>
+       * The optimization job details.
+       * </pre>
+       *
+       * <code>optional .mlflow.PromptOptimizationJob job = 1;</code>
+       * @return The job.
+       */
+      org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob getJob();
+      /**
+       * <pre>
+       * The optimization job details.
+       * </pre>
+       *
+       * <code>optional .mlflow.PromptOptimizationJob job = 1;</code>
+       */
+      org.mlflow.api.proto.PromptOptimization.PromptOptimizationJobOrBuilder getJobOrBuilder();
+    }
+    /**
+     * Protobuf type {@code mlflow.GetPromptOptimizationJob.Response}
+     */
+    public static final class Response extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:mlflow.GetPromptOptimizationJob.Response)
+        ResponseOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Response.newBuilder() to construct.
+      private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Response() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Response();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Response(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.Builder subBuilder = null;
+                if (((bitField0_ & 0x00000001) != 0)) {
+                  subBuilder = job_.toBuilder();
+                }
+                job_ = input.readMessage(org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(job_);
+                  job_ = subBuilder.buildPartial();
+                }
+                bitField0_ |= 0x00000001;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_GetPromptOptimizationJob_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_GetPromptOptimizationJob_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response.class, org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int JOB_FIELD_NUMBER = 1;
+      private org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob job_;
+      /**
+       * <pre>
+       * The optimization job details.
+       * </pre>
+       *
+       * <code>optional .mlflow.PromptOptimizationJob job = 1;</code>
+       * @return Whether the job field is set.
+       */
+      @java.lang.Override
+      public boolean hasJob() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The optimization job details.
+       * </pre>
+       *
+       * <code>optional .mlflow.PromptOptimizationJob job = 1;</code>
+       * @return The job.
+       */
+      @java.lang.Override
+      public org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob getJob() {
+        return job_ == null ? org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.getDefaultInstance() : job_;
+      }
+      /**
+       * <pre>
+       * The optimization job details.
+       * </pre>
+       *
+       * <code>optional .mlflow.PromptOptimizationJob job = 1;</code>
+       */
+      @java.lang.Override
+      public org.mlflow.api.proto.PromptOptimization.PromptOptimizationJobOrBuilder getJobOrBuilder() {
+        return job_ == null ? org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.getDefaultInstance() : job_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeMessage(1, getJob());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getJob());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response)) {
+          return super.equals(obj);
+        }
+        org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response other = (org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response) obj;
+
+        if (hasJob() != other.hasJob()) return false;
+        if (hasJob()) {
+          if (!getJob()
+              .equals(other.getJob())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasJob()) {
+          hash = (37 * hash) + JOB_FIELD_NUMBER;
+          hash = (53 * hash) + getJob().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code mlflow.GetPromptOptimizationJob.Response}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:mlflow.GetPromptOptimizationJob.Response)
+          org.mlflow.api.proto.Service.GetPromptOptimizationJob.ResponseOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_GetPromptOptimizationJob_Response_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_GetPromptOptimizationJob_Response_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response.class, org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response.Builder.class);
+        }
+
+        // Construct using org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+            getJobFieldBuilder();
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (jobBuilder_ == null) {
+            job_ = null;
+          } else {
+            jobBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_GetPromptOptimizationJob_Response_descriptor;
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response getDefaultInstanceForType() {
+          return org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response build() {
+          org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response buildPartial() {
+          org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response result = new org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            if (jobBuilder_ == null) {
+              result.job_ = job_;
+            } else {
+              result.job_ = jobBuilder_.build();
+            }
+            to_bitField0_ |= 0x00000001;
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response) {
+            return mergeFrom((org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response other) {
+          if (other == org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response.getDefaultInstance()) return this;
+          if (other.hasJob()) {
+            mergeJob(other.getJob());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob job_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob, org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.Builder, org.mlflow.api.proto.PromptOptimization.PromptOptimizationJobOrBuilder> jobBuilder_;
+        /**
+         * <pre>
+         * The optimization job details.
+         * </pre>
+         *
+         * <code>optional .mlflow.PromptOptimizationJob job = 1;</code>
+         * @return Whether the job field is set.
+         */
+        public boolean hasJob() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * The optimization job details.
+         * </pre>
+         *
+         * <code>optional .mlflow.PromptOptimizationJob job = 1;</code>
+         * @return The job.
+         */
+        public org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob getJob() {
+          if (jobBuilder_ == null) {
+            return job_ == null ? org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.getDefaultInstance() : job_;
+          } else {
+            return jobBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * The optimization job details.
+         * </pre>
+         *
+         * <code>optional .mlflow.PromptOptimizationJob job = 1;</code>
+         */
+        public Builder setJob(org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob value) {
+          if (jobBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            job_ = value;
+            onChanged();
+          } else {
+            jobBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000001;
+          return this;
+        }
+        /**
+         * <pre>
+         * The optimization job details.
+         * </pre>
+         *
+         * <code>optional .mlflow.PromptOptimizationJob job = 1;</code>
+         */
+        public Builder setJob(
+            org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.Builder builderForValue) {
+          if (jobBuilder_ == null) {
+            job_ = builderForValue.build();
+            onChanged();
+          } else {
+            jobBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000001;
+          return this;
+        }
+        /**
+         * <pre>
+         * The optimization job details.
+         * </pre>
+         *
+         * <code>optional .mlflow.PromptOptimizationJob job = 1;</code>
+         */
+        public Builder mergeJob(org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob value) {
+          if (jobBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) != 0) &&
+                job_ != null &&
+                job_ != org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.getDefaultInstance()) {
+              job_ =
+                org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.newBuilder(job_).mergeFrom(value).buildPartial();
+            } else {
+              job_ = value;
+            }
+            onChanged();
+          } else {
+            jobBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000001;
+          return this;
+        }
+        /**
+         * <pre>
+         * The optimization job details.
+         * </pre>
+         *
+         * <code>optional .mlflow.PromptOptimizationJob job = 1;</code>
+         */
+        public Builder clearJob() {
+          if (jobBuilder_ == null) {
+            job_ = null;
+            onChanged();
+          } else {
+            jobBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+        /**
+         * <pre>
+         * The optimization job details.
+         * </pre>
+         *
+         * <code>optional .mlflow.PromptOptimizationJob job = 1;</code>
+         */
+        public org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.Builder getJobBuilder() {
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return getJobFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * The optimization job details.
+         * </pre>
+         *
+         * <code>optional .mlflow.PromptOptimizationJob job = 1;</code>
+         */
+        public org.mlflow.api.proto.PromptOptimization.PromptOptimizationJobOrBuilder getJobOrBuilder() {
+          if (jobBuilder_ != null) {
+            return jobBuilder_.getMessageOrBuilder();
+          } else {
+            return job_ == null ?
+                org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.getDefaultInstance() : job_;
+          }
+        }
+        /**
+         * <pre>
+         * The optimization job details.
+         * </pre>
+         *
+         * <code>optional .mlflow.PromptOptimizationJob job = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob, org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.Builder, org.mlflow.api.proto.PromptOptimization.PromptOptimizationJobOrBuilder> 
+            getJobFieldBuilder() {
+          if (jobBuilder_ == null) {
+            jobBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob, org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.Builder, org.mlflow.api.proto.PromptOptimization.PromptOptimizationJobOrBuilder>(
+                    getJob(),
+                    getParentForChildren(),
+                    isClean());
+            job_ = null;
+          }
+          return jobBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:mlflow.GetPromptOptimizationJob.Response)
+      }
+
+      // @@protoc_insertion_point(class_scope:mlflow.GetPromptOptimizationJob.Response)
+      private static final org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response();
+      }
+
+      public static org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<Response>
+          PARSER = new com.google.protobuf.AbstractParser<Response>() {
+        @java.lang.Override
+        public Response parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Response(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Response> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Response> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.GetPromptOptimizationJob.Response getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    public static final int JOB_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object jobId_;
+    /**
+     * <pre>
+     * The unique identifier of the optimization job (same as run_id).
+     * </pre>
+     *
+     * <code>optional string job_id = 1;</code>
+     * @return Whether the jobId field is set.
+     */
+    @java.lang.Override
+    public boolean hasJobId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The unique identifier of the optimization job (same as run_id).
+     * </pre>
+     *
+     * <code>optional string job_id = 1;</code>
+     * @return The jobId.
+     */
+    @java.lang.Override
+    public java.lang.String getJobId() {
+      java.lang.Object ref = jobId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          jobId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The unique identifier of the optimization job (same as run_id).
+     * </pre>
+     *
+     * <code>optional string job_id = 1;</code>
+     * @return The bytes for jobId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getJobIdBytes() {
+      java.lang.Object ref = jobId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jobId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, jobId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, jobId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.mlflow.api.proto.Service.GetPromptOptimizationJob)) {
+        return super.equals(obj);
+      }
+      org.mlflow.api.proto.Service.GetPromptOptimizationJob other = (org.mlflow.api.proto.Service.GetPromptOptimizationJob) obj;
+
+      if (hasJobId() != other.hasJobId()) return false;
+      if (hasJobId()) {
+        if (!getJobId()
+            .equals(other.getJobId())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasJobId()) {
+        hash = (37 * hash) + JOB_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getJobId().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.mlflow.api.proto.Service.GetPromptOptimizationJob parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.GetPromptOptimizationJob parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.GetPromptOptimizationJob parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.GetPromptOptimizationJob parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.GetPromptOptimizationJob parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.GetPromptOptimizationJob parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.GetPromptOptimizationJob parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.GetPromptOptimizationJob parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.GetPromptOptimizationJob parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.GetPromptOptimizationJob parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.GetPromptOptimizationJob parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.GetPromptOptimizationJob parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.mlflow.api.proto.Service.GetPromptOptimizationJob prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code mlflow.GetPromptOptimizationJob}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mlflow.GetPromptOptimizationJob)
+        org.mlflow.api.proto.Service.GetPromptOptimizationJobOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_GetPromptOptimizationJob_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_GetPromptOptimizationJob_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.mlflow.api.proto.Service.GetPromptOptimizationJob.class, org.mlflow.api.proto.Service.GetPromptOptimizationJob.Builder.class);
+      }
+
+      // Construct using org.mlflow.api.proto.Service.GetPromptOptimizationJob.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        jobId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_GetPromptOptimizationJob_descriptor;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.GetPromptOptimizationJob getDefaultInstanceForType() {
+        return org.mlflow.api.proto.Service.GetPromptOptimizationJob.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.GetPromptOptimizationJob build() {
+        org.mlflow.api.proto.Service.GetPromptOptimizationJob result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.GetPromptOptimizationJob buildPartial() {
+        org.mlflow.api.proto.Service.GetPromptOptimizationJob result = new org.mlflow.api.proto.Service.GetPromptOptimizationJob(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.jobId_ = jobId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.mlflow.api.proto.Service.GetPromptOptimizationJob) {
+          return mergeFrom((org.mlflow.api.proto.Service.GetPromptOptimizationJob)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.mlflow.api.proto.Service.GetPromptOptimizationJob other) {
+        if (other == org.mlflow.api.proto.Service.GetPromptOptimizationJob.getDefaultInstance()) return this;
+        if (other.hasJobId()) {
+          bitField0_ |= 0x00000001;
+          jobId_ = other.jobId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.mlflow.api.proto.Service.GetPromptOptimizationJob parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.mlflow.api.proto.Service.GetPromptOptimizationJob) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object jobId_ = "";
+      /**
+       * <pre>
+       * The unique identifier of the optimization job (same as run_id).
+       * </pre>
+       *
+       * <code>optional string job_id = 1;</code>
+       * @return Whether the jobId field is set.
+       */
+      public boolean hasJobId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The unique identifier of the optimization job (same as run_id).
+       * </pre>
+       *
+       * <code>optional string job_id = 1;</code>
+       * @return The jobId.
+       */
+      public java.lang.String getJobId() {
+        java.lang.Object ref = jobId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            jobId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The unique identifier of the optimization job (same as run_id).
+       * </pre>
+       *
+       * <code>optional string job_id = 1;</code>
+       * @return The bytes for jobId.
+       */
+      public com.google.protobuf.ByteString
+          getJobIdBytes() {
+        java.lang.Object ref = jobId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          jobId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The unique identifier of the optimization job (same as run_id).
+       * </pre>
+       *
+       * <code>optional string job_id = 1;</code>
+       * @param value The jobId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJobId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        jobId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The unique identifier of the optimization job (same as run_id).
+       * </pre>
+       *
+       * <code>optional string job_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJobId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        jobId_ = getDefaultInstance().getJobId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The unique identifier of the optimization job (same as run_id).
+       * </pre>
+       *
+       * <code>optional string job_id = 1;</code>
+       * @param value The bytes for jobId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJobIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        jobId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:mlflow.GetPromptOptimizationJob)
+    }
+
+    // @@protoc_insertion_point(class_scope:mlflow.GetPromptOptimizationJob)
+    private static final org.mlflow.api.proto.Service.GetPromptOptimizationJob DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.mlflow.api.proto.Service.GetPromptOptimizationJob();
+    }
+
+    public static org.mlflow.api.proto.Service.GetPromptOptimizationJob getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<GetPromptOptimizationJob>
+        PARSER = new com.google.protobuf.AbstractParser<GetPromptOptimizationJob>() {
+      @java.lang.Override
+      public GetPromptOptimizationJob parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetPromptOptimizationJob(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetPromptOptimizationJob> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetPromptOptimizationJob> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.mlflow.api.proto.Service.GetPromptOptimizationJob getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SearchPromptOptimizationJobsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mlflow.SearchPromptOptimizationJobs)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the MLflow experiment to search optimization jobs in.
+     * </pre>
+     *
+     * <code>optional string experiment_id = 1;</code>
+     * @return Whether the experimentId field is set.
+     */
+    boolean hasExperimentId();
+    /**
+     * <pre>
+     * ID of the MLflow experiment to search optimization jobs in.
+     * </pre>
+     *
+     * <code>optional string experiment_id = 1;</code>
+     * @return The experimentId.
+     */
+    java.lang.String getExperimentId();
+    /**
+     * <pre>
+     * ID of the MLflow experiment to search optimization jobs in.
+     * </pre>
+     *
+     * <code>optional string experiment_id = 1;</code>
+     * @return The bytes for experimentId.
+     */
+    com.google.protobuf.ByteString
+        getExperimentIdBytes();
+  }
+  /**
+   * Protobuf type {@code mlflow.SearchPromptOptimizationJobs}
+   */
+  public static final class SearchPromptOptimizationJobs extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:mlflow.SearchPromptOptimizationJobs)
+      SearchPromptOptimizationJobsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SearchPromptOptimizationJobs.newBuilder() to construct.
+    private SearchPromptOptimizationJobs(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SearchPromptOptimizationJobs() {
+      experimentId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SearchPromptOptimizationJobs();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SearchPromptOptimizationJobs(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              experimentId_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.mlflow.api.proto.Service.internal_static_mlflow_SearchPromptOptimizationJobs_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.mlflow.api.proto.Service.internal_static_mlflow_SearchPromptOptimizationJobs_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.class, org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Builder.class);
+    }
+
+    public interface ResponseOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:mlflow.SearchPromptOptimizationJobs.Response)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * List of optimization jobs.
+       * </pre>
+       *
+       * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+       */
+      java.util.List<org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob> 
+          getJobsList();
+      /**
+       * <pre>
+       * List of optimization jobs.
+       * </pre>
+       *
+       * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+       */
+      org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob getJobs(int index);
+      /**
+       * <pre>
+       * List of optimization jobs.
+       * </pre>
+       *
+       * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+       */
+      int getJobsCount();
+      /**
+       * <pre>
+       * List of optimization jobs.
+       * </pre>
+       *
+       * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+       */
+      java.util.List<? extends org.mlflow.api.proto.PromptOptimization.PromptOptimizationJobOrBuilder> 
+          getJobsOrBuilderList();
+      /**
+       * <pre>
+       * List of optimization jobs.
+       * </pre>
+       *
+       * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+       */
+      org.mlflow.api.proto.PromptOptimization.PromptOptimizationJobOrBuilder getJobsOrBuilder(
+          int index);
+    }
+    /**
+     * Protobuf type {@code mlflow.SearchPromptOptimizationJobs.Response}
+     */
+    public static final class Response extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:mlflow.SearchPromptOptimizationJobs.Response)
+        ResponseOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Response.newBuilder() to construct.
+      private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Response() {
+        jobs_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Response();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Response(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  jobs_ = new java.util.ArrayList<org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob>();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                jobs_.add(
+                    input.readMessage(org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.PARSER, extensionRegistry));
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            jobs_ = java.util.Collections.unmodifiableList(jobs_);
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_SearchPromptOptimizationJobs_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_SearchPromptOptimizationJobs_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response.class, org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response.Builder.class);
+      }
+
+      public static final int JOBS_FIELD_NUMBER = 1;
+      private java.util.List<org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob> jobs_;
+      /**
+       * <pre>
+       * List of optimization jobs.
+       * </pre>
+       *
+       * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+       */
+      @java.lang.Override
+      public java.util.List<org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob> getJobsList() {
+        return jobs_;
+      }
+      /**
+       * <pre>
+       * List of optimization jobs.
+       * </pre>
+       *
+       * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+       */
+      @java.lang.Override
+      public java.util.List<? extends org.mlflow.api.proto.PromptOptimization.PromptOptimizationJobOrBuilder> 
+          getJobsOrBuilderList() {
+        return jobs_;
+      }
+      /**
+       * <pre>
+       * List of optimization jobs.
+       * </pre>
+       *
+       * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+       */
+      @java.lang.Override
+      public int getJobsCount() {
+        return jobs_.size();
+      }
+      /**
+       * <pre>
+       * List of optimization jobs.
+       * </pre>
+       *
+       * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+       */
+      @java.lang.Override
+      public org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob getJobs(int index) {
+        return jobs_.get(index);
+      }
+      /**
+       * <pre>
+       * List of optimization jobs.
+       * </pre>
+       *
+       * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+       */
+      @java.lang.Override
+      public org.mlflow.api.proto.PromptOptimization.PromptOptimizationJobOrBuilder getJobsOrBuilder(
+          int index) {
+        return jobs_.get(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < jobs_.size(); i++) {
+          output.writeMessage(1, jobs_.get(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        for (int i = 0; i < jobs_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, jobs_.get(i));
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response)) {
+          return super.equals(obj);
+        }
+        org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response other = (org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response) obj;
+
+        if (!getJobsList()
+            .equals(other.getJobsList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getJobsCount() > 0) {
+          hash = (37 * hash) + JOBS_FIELD_NUMBER;
+          hash = (53 * hash) + getJobsList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code mlflow.SearchPromptOptimizationJobs.Response}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:mlflow.SearchPromptOptimizationJobs.Response)
+          org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.ResponseOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_SearchPromptOptimizationJobs_Response_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_SearchPromptOptimizationJobs_Response_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response.class, org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response.Builder.class);
+        }
+
+        // Construct using org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+            getJobsFieldBuilder();
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (jobsBuilder_ == null) {
+            jobs_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            jobsBuilder_.clear();
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_SearchPromptOptimizationJobs_Response_descriptor;
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response getDefaultInstanceForType() {
+          return org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response build() {
+          org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response buildPartial() {
+          org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response result = new org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response(this);
+          int from_bitField0_ = bitField0_;
+          if (jobsBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) != 0)) {
+              jobs_ = java.util.Collections.unmodifiableList(jobs_);
+              bitField0_ = (bitField0_ & ~0x00000001);
+            }
+            result.jobs_ = jobs_;
+          } else {
+            result.jobs_ = jobsBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response) {
+            return mergeFrom((org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response other) {
+          if (other == org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response.getDefaultInstance()) return this;
+          if (jobsBuilder_ == null) {
+            if (!other.jobs_.isEmpty()) {
+              if (jobs_.isEmpty()) {
+                jobs_ = other.jobs_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+              } else {
+                ensureJobsIsMutable();
+                jobs_.addAll(other.jobs_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.jobs_.isEmpty()) {
+              if (jobsBuilder_.isEmpty()) {
+                jobsBuilder_.dispose();
+                jobsBuilder_ = null;
+                jobs_ = other.jobs_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                jobsBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getJobsFieldBuilder() : null;
+              } else {
+                jobsBuilder_.addAllMessages(other.jobs_);
+              }
+            }
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.util.List<org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob> jobs_ =
+          java.util.Collections.emptyList();
+        private void ensureJobsIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            jobs_ = new java.util.ArrayList<org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob>(jobs_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob, org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.Builder, org.mlflow.api.proto.PromptOptimization.PromptOptimizationJobOrBuilder> jobsBuilder_;
+
+        /**
+         * <pre>
+         * List of optimization jobs.
+         * </pre>
+         *
+         * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+         */
+        public java.util.List<org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob> getJobsList() {
+          if (jobsBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(jobs_);
+          } else {
+            return jobsBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <pre>
+         * List of optimization jobs.
+         * </pre>
+         *
+         * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+         */
+        public int getJobsCount() {
+          if (jobsBuilder_ == null) {
+            return jobs_.size();
+          } else {
+            return jobsBuilder_.getCount();
+          }
+        }
+        /**
+         * <pre>
+         * List of optimization jobs.
+         * </pre>
+         *
+         * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+         */
+        public org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob getJobs(int index) {
+          if (jobsBuilder_ == null) {
+            return jobs_.get(index);
+          } else {
+            return jobsBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <pre>
+         * List of optimization jobs.
+         * </pre>
+         *
+         * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+         */
+        public Builder setJobs(
+            int index, org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob value) {
+          if (jobsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureJobsIsMutable();
+            jobs_.set(index, value);
+            onChanged();
+          } else {
+            jobsBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * List of optimization jobs.
+         * </pre>
+         *
+         * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+         */
+        public Builder setJobs(
+            int index, org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.Builder builderForValue) {
+          if (jobsBuilder_ == null) {
+            ensureJobsIsMutable();
+            jobs_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            jobsBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * List of optimization jobs.
+         * </pre>
+         *
+         * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+         */
+        public Builder addJobs(org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob value) {
+          if (jobsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureJobsIsMutable();
+            jobs_.add(value);
+            onChanged();
+          } else {
+            jobsBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * List of optimization jobs.
+         * </pre>
+         *
+         * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+         */
+        public Builder addJobs(
+            int index, org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob value) {
+          if (jobsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureJobsIsMutable();
+            jobs_.add(index, value);
+            onChanged();
+          } else {
+            jobsBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * List of optimization jobs.
+         * </pre>
+         *
+         * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+         */
+        public Builder addJobs(
+            org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.Builder builderForValue) {
+          if (jobsBuilder_ == null) {
+            ensureJobsIsMutable();
+            jobs_.add(builderForValue.build());
+            onChanged();
+          } else {
+            jobsBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * List of optimization jobs.
+         * </pre>
+         *
+         * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+         */
+        public Builder addJobs(
+            int index, org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.Builder builderForValue) {
+          if (jobsBuilder_ == null) {
+            ensureJobsIsMutable();
+            jobs_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            jobsBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * List of optimization jobs.
+         * </pre>
+         *
+         * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+         */
+        public Builder addAllJobs(
+            java.lang.Iterable<? extends org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob> values) {
+          if (jobsBuilder_ == null) {
+            ensureJobsIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, jobs_);
+            onChanged();
+          } else {
+            jobsBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * List of optimization jobs.
+         * </pre>
+         *
+         * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+         */
+        public Builder clearJobs() {
+          if (jobsBuilder_ == null) {
+            jobs_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+            onChanged();
+          } else {
+            jobsBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * List of optimization jobs.
+         * </pre>
+         *
+         * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+         */
+        public Builder removeJobs(int index) {
+          if (jobsBuilder_ == null) {
+            ensureJobsIsMutable();
+            jobs_.remove(index);
+            onChanged();
+          } else {
+            jobsBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * List of optimization jobs.
+         * </pre>
+         *
+         * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+         */
+        public org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.Builder getJobsBuilder(
+            int index) {
+          return getJobsFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <pre>
+         * List of optimization jobs.
+         * </pre>
+         *
+         * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+         */
+        public org.mlflow.api.proto.PromptOptimization.PromptOptimizationJobOrBuilder getJobsOrBuilder(
+            int index) {
+          if (jobsBuilder_ == null) {
+            return jobs_.get(index);  } else {
+            return jobsBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <pre>
+         * List of optimization jobs.
+         * </pre>
+         *
+         * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+         */
+        public java.util.List<? extends org.mlflow.api.proto.PromptOptimization.PromptOptimizationJobOrBuilder> 
+             getJobsOrBuilderList() {
+          if (jobsBuilder_ != null) {
+            return jobsBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(jobs_);
+          }
+        }
+        /**
+         * <pre>
+         * List of optimization jobs.
+         * </pre>
+         *
+         * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+         */
+        public org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.Builder addJobsBuilder() {
+          return getJobsFieldBuilder().addBuilder(
+              org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.getDefaultInstance());
+        }
+        /**
+         * <pre>
+         * List of optimization jobs.
+         * </pre>
+         *
+         * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+         */
+        public org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.Builder addJobsBuilder(
+            int index) {
+          return getJobsFieldBuilder().addBuilder(
+              index, org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.getDefaultInstance());
+        }
+        /**
+         * <pre>
+         * List of optimization jobs.
+         * </pre>
+         *
+         * <code>repeated .mlflow.PromptOptimizationJob jobs = 1;</code>
+         */
+        public java.util.List<org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.Builder> 
+             getJobsBuilderList() {
+          return getJobsFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob, org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.Builder, org.mlflow.api.proto.PromptOptimization.PromptOptimizationJobOrBuilder> 
+            getJobsFieldBuilder() {
+          if (jobsBuilder_ == null) {
+            jobsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob, org.mlflow.api.proto.PromptOptimization.PromptOptimizationJob.Builder, org.mlflow.api.proto.PromptOptimization.PromptOptimizationJobOrBuilder>(
+                    jobs_,
+                    ((bitField0_ & 0x00000001) != 0),
+                    getParentForChildren(),
+                    isClean());
+            jobs_ = null;
+          }
+          return jobsBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:mlflow.SearchPromptOptimizationJobs.Response)
+      }
+
+      // @@protoc_insertion_point(class_scope:mlflow.SearchPromptOptimizationJobs.Response)
+      private static final org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response();
+      }
+
+      public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<Response>
+          PARSER = new com.google.protobuf.AbstractParser<Response>() {
+        @java.lang.Override
+        public Response parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Response(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Response> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Response> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Response getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    public static final int EXPERIMENT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object experimentId_;
+    /**
+     * <pre>
+     * ID of the MLflow experiment to search optimization jobs in.
+     * </pre>
+     *
+     * <code>optional string experiment_id = 1;</code>
+     * @return Whether the experimentId field is set.
+     */
+    @java.lang.Override
+    public boolean hasExperimentId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * ID of the MLflow experiment to search optimization jobs in.
+     * </pre>
+     *
+     * <code>optional string experiment_id = 1;</code>
+     * @return The experimentId.
+     */
+    @java.lang.Override
+    public java.lang.String getExperimentId() {
+      java.lang.Object ref = experimentId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          experimentId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the MLflow experiment to search optimization jobs in.
+     * </pre>
+     *
+     * <code>optional string experiment_id = 1;</code>
+     * @return The bytes for experimentId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExperimentIdBytes() {
+      java.lang.Object ref = experimentId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        experimentId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, experimentId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, experimentId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.mlflow.api.proto.Service.SearchPromptOptimizationJobs)) {
+        return super.equals(obj);
+      }
+      org.mlflow.api.proto.Service.SearchPromptOptimizationJobs other = (org.mlflow.api.proto.Service.SearchPromptOptimizationJobs) obj;
+
+      if (hasExperimentId() != other.hasExperimentId()) return false;
+      if (hasExperimentId()) {
+        if (!getExperimentId()
+            .equals(other.getExperimentId())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasExperimentId()) {
+        hash = (37 * hash) + EXPERIMENT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getExperimentId().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.mlflow.api.proto.Service.SearchPromptOptimizationJobs prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code mlflow.SearchPromptOptimizationJobs}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mlflow.SearchPromptOptimizationJobs)
+        org.mlflow.api.proto.Service.SearchPromptOptimizationJobsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_SearchPromptOptimizationJobs_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_SearchPromptOptimizationJobs_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.class, org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.Builder.class);
+      }
+
+      // Construct using org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        experimentId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_SearchPromptOptimizationJobs_descriptor;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.SearchPromptOptimizationJobs getDefaultInstanceForType() {
+        return org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.SearchPromptOptimizationJobs build() {
+        org.mlflow.api.proto.Service.SearchPromptOptimizationJobs result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.SearchPromptOptimizationJobs buildPartial() {
+        org.mlflow.api.proto.Service.SearchPromptOptimizationJobs result = new org.mlflow.api.proto.Service.SearchPromptOptimizationJobs(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.experimentId_ = experimentId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.mlflow.api.proto.Service.SearchPromptOptimizationJobs) {
+          return mergeFrom((org.mlflow.api.proto.Service.SearchPromptOptimizationJobs)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.mlflow.api.proto.Service.SearchPromptOptimizationJobs other) {
+        if (other == org.mlflow.api.proto.Service.SearchPromptOptimizationJobs.getDefaultInstance()) return this;
+        if (other.hasExperimentId()) {
+          bitField0_ |= 0x00000001;
+          experimentId_ = other.experimentId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.mlflow.api.proto.Service.SearchPromptOptimizationJobs parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.mlflow.api.proto.Service.SearchPromptOptimizationJobs) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object experimentId_ = "";
+      /**
+       * <pre>
+       * ID of the MLflow experiment to search optimization jobs in.
+       * </pre>
+       *
+       * <code>optional string experiment_id = 1;</code>
+       * @return Whether the experimentId field is set.
+       */
+      public boolean hasExperimentId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * ID of the MLflow experiment to search optimization jobs in.
+       * </pre>
+       *
+       * <code>optional string experiment_id = 1;</code>
+       * @return The experimentId.
+       */
+      public java.lang.String getExperimentId() {
+        java.lang.Object ref = experimentId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            experimentId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the MLflow experiment to search optimization jobs in.
+       * </pre>
+       *
+       * <code>optional string experiment_id = 1;</code>
+       * @return The bytes for experimentId.
+       */
+      public com.google.protobuf.ByteString
+          getExperimentIdBytes() {
+        java.lang.Object ref = experimentId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          experimentId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the MLflow experiment to search optimization jobs in.
+       * </pre>
+       *
+       * <code>optional string experiment_id = 1;</code>
+       * @param value The experimentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExperimentId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        experimentId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the MLflow experiment to search optimization jobs in.
+       * </pre>
+       *
+       * <code>optional string experiment_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExperimentId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        experimentId_ = getDefaultInstance().getExperimentId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the MLflow experiment to search optimization jobs in.
+       * </pre>
+       *
+       * <code>optional string experiment_id = 1;</code>
+       * @param value The bytes for experimentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExperimentIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        experimentId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:mlflow.SearchPromptOptimizationJobs)
+    }
+
+    // @@protoc_insertion_point(class_scope:mlflow.SearchPromptOptimizationJobs)
+    private static final org.mlflow.api.proto.Service.SearchPromptOptimizationJobs DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.mlflow.api.proto.Service.SearchPromptOptimizationJobs();
+    }
+
+    public static org.mlflow.api.proto.Service.SearchPromptOptimizationJobs getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<SearchPromptOptimizationJobs>
+        PARSER = new com.google.protobuf.AbstractParser<SearchPromptOptimizationJobs>() {
+      @java.lang.Override
+      public SearchPromptOptimizationJobs parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SearchPromptOptimizationJobs(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SearchPromptOptimizationJobs> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SearchPromptOptimizationJobs> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.mlflow.api.proto.Service.SearchPromptOptimizationJobs getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CancelPromptOptimizationJobOrBuilder extends
       // @@protoc_insertion_point(interface_extends:mlflow.CancelPromptOptimizationJob)
       com.google.protobuf.MessageOrBuilder {
@@ -254879,6 +257784,1086 @@ public final class Service {
 
   }
 
+  public interface DeletePromptOptimizationJobOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mlflow.DeletePromptOptimizationJob)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The unique identifier of the optimization job to delete.
+     * </pre>
+     *
+     * <code>optional string job_id = 1;</code>
+     * @return Whether the jobId field is set.
+     */
+    boolean hasJobId();
+    /**
+     * <pre>
+     * The unique identifier of the optimization job to delete.
+     * </pre>
+     *
+     * <code>optional string job_id = 1;</code>
+     * @return The jobId.
+     */
+    java.lang.String getJobId();
+    /**
+     * <pre>
+     * The unique identifier of the optimization job to delete.
+     * </pre>
+     *
+     * <code>optional string job_id = 1;</code>
+     * @return The bytes for jobId.
+     */
+    com.google.protobuf.ByteString
+        getJobIdBytes();
+  }
+  /**
+   * Protobuf type {@code mlflow.DeletePromptOptimizationJob}
+   */
+  public static final class DeletePromptOptimizationJob extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:mlflow.DeletePromptOptimizationJob)
+      DeletePromptOptimizationJobOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeletePromptOptimizationJob.newBuilder() to construct.
+    private DeletePromptOptimizationJob(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeletePromptOptimizationJob() {
+      jobId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeletePromptOptimizationJob();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeletePromptOptimizationJob(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              jobId_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.mlflow.api.proto.Service.internal_static_mlflow_DeletePromptOptimizationJob_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.mlflow.api.proto.Service.internal_static_mlflow_DeletePromptOptimizationJob_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.mlflow.api.proto.Service.DeletePromptOptimizationJob.class, org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Builder.class);
+    }
+
+    public interface ResponseOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:mlflow.DeletePromptOptimizationJob.Response)
+        com.google.protobuf.MessageOrBuilder {
+    }
+    /**
+     * <pre>
+     * Empty response on successful deletion.
+     * </pre>
+     *
+     * Protobuf type {@code mlflow.DeletePromptOptimizationJob.Response}
+     */
+    public static final class Response extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:mlflow.DeletePromptOptimizationJob.Response)
+        ResponseOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Response.newBuilder() to construct.
+      private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Response() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Response();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Response(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_DeletePromptOptimizationJob_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_DeletePromptOptimizationJob_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response.class, org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response.Builder.class);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response)) {
+          return super.equals(obj);
+        }
+        org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response other = (org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response) obj;
+
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Empty response on successful deletion.
+       * </pre>
+       *
+       * Protobuf type {@code mlflow.DeletePromptOptimizationJob.Response}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:mlflow.DeletePromptOptimizationJob.Response)
+          org.mlflow.api.proto.Service.DeletePromptOptimizationJob.ResponseOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_DeletePromptOptimizationJob_Response_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_DeletePromptOptimizationJob_Response_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response.class, org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response.Builder.class);
+        }
+
+        // Construct using org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_DeletePromptOptimizationJob_Response_descriptor;
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response getDefaultInstanceForType() {
+          return org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response build() {
+          org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response buildPartial() {
+          org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response result = new org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response(this);
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response) {
+            return mergeFrom((org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response other) {
+          if (other == org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response.getDefaultInstance()) return this;
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:mlflow.DeletePromptOptimizationJob.Response)
+      }
+
+      // @@protoc_insertion_point(class_scope:mlflow.DeletePromptOptimizationJob.Response)
+      private static final org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response();
+      }
+
+      public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<Response>
+          PARSER = new com.google.protobuf.AbstractParser<Response>() {
+        @java.lang.Override
+        public Response parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Response(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Response> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Response> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Response getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    public static final int JOB_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object jobId_;
+    /**
+     * <pre>
+     * The unique identifier of the optimization job to delete.
+     * </pre>
+     *
+     * <code>optional string job_id = 1;</code>
+     * @return Whether the jobId field is set.
+     */
+    @java.lang.Override
+    public boolean hasJobId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The unique identifier of the optimization job to delete.
+     * </pre>
+     *
+     * <code>optional string job_id = 1;</code>
+     * @return The jobId.
+     */
+    @java.lang.Override
+    public java.lang.String getJobId() {
+      java.lang.Object ref = jobId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          jobId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The unique identifier of the optimization job to delete.
+     * </pre>
+     *
+     * <code>optional string job_id = 1;</code>
+     * @return The bytes for jobId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getJobIdBytes() {
+      java.lang.Object ref = jobId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        jobId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, jobId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, jobId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.mlflow.api.proto.Service.DeletePromptOptimizationJob)) {
+        return super.equals(obj);
+      }
+      org.mlflow.api.proto.Service.DeletePromptOptimizationJob other = (org.mlflow.api.proto.Service.DeletePromptOptimizationJob) obj;
+
+      if (hasJobId() != other.hasJobId()) return false;
+      if (hasJobId()) {
+        if (!getJobId()
+            .equals(other.getJobId())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasJobId()) {
+        hash = (37 * hash) + JOB_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getJobId().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.mlflow.api.proto.Service.DeletePromptOptimizationJob prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code mlflow.DeletePromptOptimizationJob}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mlflow.DeletePromptOptimizationJob)
+        org.mlflow.api.proto.Service.DeletePromptOptimizationJobOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_DeletePromptOptimizationJob_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_DeletePromptOptimizationJob_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.mlflow.api.proto.Service.DeletePromptOptimizationJob.class, org.mlflow.api.proto.Service.DeletePromptOptimizationJob.Builder.class);
+      }
+
+      // Construct using org.mlflow.api.proto.Service.DeletePromptOptimizationJob.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        jobId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_DeletePromptOptimizationJob_descriptor;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.DeletePromptOptimizationJob getDefaultInstanceForType() {
+        return org.mlflow.api.proto.Service.DeletePromptOptimizationJob.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.DeletePromptOptimizationJob build() {
+        org.mlflow.api.proto.Service.DeletePromptOptimizationJob result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.DeletePromptOptimizationJob buildPartial() {
+        org.mlflow.api.proto.Service.DeletePromptOptimizationJob result = new org.mlflow.api.proto.Service.DeletePromptOptimizationJob(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.jobId_ = jobId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.mlflow.api.proto.Service.DeletePromptOptimizationJob) {
+          return mergeFrom((org.mlflow.api.proto.Service.DeletePromptOptimizationJob)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.mlflow.api.proto.Service.DeletePromptOptimizationJob other) {
+        if (other == org.mlflow.api.proto.Service.DeletePromptOptimizationJob.getDefaultInstance()) return this;
+        if (other.hasJobId()) {
+          bitField0_ |= 0x00000001;
+          jobId_ = other.jobId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.mlflow.api.proto.Service.DeletePromptOptimizationJob parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.mlflow.api.proto.Service.DeletePromptOptimizationJob) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object jobId_ = "";
+      /**
+       * <pre>
+       * The unique identifier of the optimization job to delete.
+       * </pre>
+       *
+       * <code>optional string job_id = 1;</code>
+       * @return Whether the jobId field is set.
+       */
+      public boolean hasJobId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The unique identifier of the optimization job to delete.
+       * </pre>
+       *
+       * <code>optional string job_id = 1;</code>
+       * @return The jobId.
+       */
+      public java.lang.String getJobId() {
+        java.lang.Object ref = jobId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            jobId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The unique identifier of the optimization job to delete.
+       * </pre>
+       *
+       * <code>optional string job_id = 1;</code>
+       * @return The bytes for jobId.
+       */
+      public com.google.protobuf.ByteString
+          getJobIdBytes() {
+        java.lang.Object ref = jobId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          jobId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The unique identifier of the optimization job to delete.
+       * </pre>
+       *
+       * <code>optional string job_id = 1;</code>
+       * @param value The jobId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJobId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        jobId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The unique identifier of the optimization job to delete.
+       * </pre>
+       *
+       * <code>optional string job_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJobId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        jobId_ = getDefaultInstance().getJobId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The unique identifier of the optimization job to delete.
+       * </pre>
+       *
+       * <code>optional string job_id = 1;</code>
+       * @param value The bytes for jobId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJobIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        jobId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:mlflow.DeletePromptOptimizationJob)
+    }
+
+    // @@protoc_insertion_point(class_scope:mlflow.DeletePromptOptimizationJob)
+    private static final org.mlflow.api.proto.Service.DeletePromptOptimizationJob DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.mlflow.api.proto.Service.DeletePromptOptimizationJob();
+    }
+
+    public static org.mlflow.api.proto.Service.DeletePromptOptimizationJob getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<DeletePromptOptimizationJob>
+        PARSER = new com.google.protobuf.AbstractParser<DeletePromptOptimizationJob>() {
+      @java.lang.Override
+      public DeletePromptOptimizationJob parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeletePromptOptimizationJob(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeletePromptOptimizationJob> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeletePromptOptimizationJob> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.mlflow.api.proto.Service.DeletePromptOptimizationJob getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mlflow_Metric_descriptor;
   private static final 
@@ -256170,6 +260155,26 @@ public final class Service {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_mlflow_CreatePromptOptimizationJob_Response_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_mlflow_GetPromptOptimizationJob_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_mlflow_GetPromptOptimizationJob_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_mlflow_GetPromptOptimizationJob_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_mlflow_GetPromptOptimizationJob_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_mlflow_SearchPromptOptimizationJobs_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_mlflow_SearchPromptOptimizationJobs_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_mlflow_SearchPromptOptimizationJobs_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_mlflow_SearchPromptOptimizationJobs_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mlflow_CancelPromptOptimizationJob_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -256179,6 +260184,16 @@ public final class Service {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_mlflow_CancelPromptOptimizationJob_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_mlflow_DeletePromptOptimizationJob_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_mlflow_DeletePromptOptimizationJob_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_mlflow_DeletePromptOptimizationJob_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_mlflow_DeletePromptOptimizationJob_Response_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -256800,443 +260815,467 @@ public final class Service {
       "#.mlflow.PromptOptimizationJobConfig\022.\n\004" +
       "tags\030\004 \003(\0132 .mlflow.PromptOptimizationJo" +
       "bTag\0326\n\010Response\022*\n\003job\030\001 \001(\0132\035.mlflow.P" +
-      "romptOptimizationJob\"e\n\033CancelPromptOpti" +
-      "mizationJob\022\016\n\006job_id\030\001 \001(\t\0326\n\010Response\022" +
-      "*\n\003job\030\001 \001(\0132\035.mlflow.PromptOptimization" +
-      "Job*6\n\010ViewType\022\017\n\013ACTIVE_ONLY\020\001\022\020\n\014DELE" +
-      "TED_ONLY\020\002\022\007\n\003ALL\020\003*I\n\nSourceType\022\014\n\010NOT" +
-      "EBOOK\020\001\022\007\n\003JOB\020\002\022\013\n\007PROJECT\020\003\022\t\n\005LOCAL\020\004" +
-      "\022\014\n\007UNKNOWN\020\350\007*M\n\tRunStatus\022\013\n\007RUNNING\020\001" +
-      "\022\r\n\tSCHEDULED\020\002\022\014\n\010FINISHED\020\003\022\n\n\006FAILED\020" +
-      "\004\022\n\n\006KILLED\020\005*O\n\013TraceStatus\022\034\n\030TRACE_ST" +
-      "ATUS_UNSPECIFIED\020\000\022\006\n\002OK\020\001\022\t\n\005ERROR\020\002\022\017\n" +
-      "\013IN_PROGRESS\020\003*8\n\016MetricViewType\022\n\n\006TRAC" +
-      "ES\020\001\022\t\n\005SPANS\020\002\022\017\n\013ASSESSMENTS\020\003*P\n\017Aggr" +
-      "egationType\022\t\n\005COUNT\020\001\022\007\n\003SUM\020\002\022\007\n\003AVG\020\003" +
-      "\022\016\n\nPERCENTILE\020\004\022\007\n\003MIN\020\005\022\007\n\003MAX\020\006*\212\001\n\021L" +
-      "oggedModelStatus\022#\n\037LOGGED_MODEL_STATUS_" +
-      "UNSPECIFIED\020\000\022\030\n\024LOGGED_MODEL_PENDING\020\001\022" +
-      "\026\n\022LOGGED_MODEL_READY\020\002\022\036\n\032LOGGED_MODEL_" +
-      "UPLOAD_FAILED\020\003*Z\n\017RoutingStrategy\022&\n\034RO" +
-      "UTING_STRATEGY_UNSPECIFIED\020\000\032\004\360\206\031\003\022\037\n\033RE" +
-      "QUEST_BASED_TRAFFIC_SPLIT\020\001*K\n\020FallbackS" +
-      "trategy\022\'\n\035FALLBACK_STRATEGY_UNSPECIFIED" +
-      "\020\000\032\004\360\206\031\003\022\016\n\nSEQUENTIAL\020\001*X\n\027GatewayModel" +
-      "LinkageType\022\"\n\030LINKAGE_TYPE_UNSPECIFIED\020" +
-      "\000\032\004\360\206\031\003\022\013\n\007PRIMARY\020\001\022\014\n\010FALLBACK\020\0022\327\200\001\n\r" +
-      "MlflowService\022\246\001\n\023getExperimentByName\022\033." +
-      "mlflow.GetExperimentByName\032$.mlflow.GetE" +
-      "xperimentByName.Response\"L\362\206\031H\n,\n\003GET\022\037/" +
-      "mlflow/experiments/get-by-name\032\004\010\002\020\000\020\001*\026" +
-      "Get Experiment By Name\022\224\001\n\020createExperim" +
-      "ent\022\030.mlflow.CreateExperiment\032!.mlflow.C" +
-      "reateExperiment.Response\"C\362\206\031?\n(\n\004POST\022\032" +
-      "/mlflow/experiments/create\032\004\010\002\020\000\020\001*\021Crea" +
-      "te Experiment\022\301\001\n\021searchExperiments\022\031.ml" +
-      "flow.SearchExperiments\032\".mlflow.SearchEx" +
-      "periments.Response\"m\362\206\031i\n(\n\004POST\022\032/mlflo" +
-      "w/experiments/search\032\004\010\002\020\000\n\'\n\003GET\022\032/mlfl" +
-      "ow/experiments/search\032\004\010\002\020\000\020\001*\022Search Ex" +
-      "periments\022\210\001\n\rgetExperiment\022\025.mlflow.Get" +
-      "Experiment\032\036.mlflow.GetExperiment.Respon" +
-      "se\"@\362\206\0318\n$\n\003GET\022\027/mlflow/experiments/get" +
-      "\032\004\010\002\020\000\020\001*\016Get Experiment\272\214\031\000\022\224\001\n\020deleteE" +
-      "xperiment\022\030.mlflow.DeleteExperiment\032!.ml" +
-      "flow.DeleteExperiment.Response\"C\362\206\031?\n(\n\004" +
-      "POST\022\032/mlflow/experiments/delete\032\004\010\002\020\000\020\001" +
-      "*\021Delete Experiment\022\231\001\n\021restoreExperimen" +
-      "t\022\031.mlflow.RestoreExperiment\032\".mlflow.Re" +
-      "storeExperiment.Response\"E\362\206\031A\n)\n\004POST\022\033" +
-      "/mlflow/experiments/restore\032\004\010\002\020\000\020\001*\022Res" +
-      "tore Experiment\022\224\001\n\020updateExperiment\022\030.m" +
-      "lflow.UpdateExperiment\032!.mlflow.UpdateEx" +
-      "periment.Response\"C\362\206\031?\n(\n\004POST\022\032/mlflow" +
-      "/experiments/update\032\004\010\002\020\000\020\001*\021Update Expe" +
-      "riment\022q\n\tcreateRun\022\021.mlflow.CreateRun\032\032" +
-      ".mlflow.CreateRun.Response\"5\362\206\0311\n!\n\004POST" +
-      "\022\023/mlflow/runs/create\032\004\010\002\020\000\020\001*\nCreate Ru" +
-      "n\022q\n\tupdateRun\022\021.mlflow.UpdateRun\032\032.mlfl" +
-      "ow.UpdateRun.Response\"5\362\206\0311\n!\n\004POST\022\023/ml" +
-      "flow/runs/update\032\004\010\002\020\000\020\001*\nUpdate Run\022q\n\t" +
-      "deleteRun\022\021.mlflow.DeleteRun\032\032.mlflow.De" +
-      "leteRun.Response\"5\362\206\0311\n!\n\004POST\022\023/mlflow/" +
-      "runs/delete\032\004\010\002\020\000\020\001*\nDelete Run\022v\n\nresto" +
-      "reRun\022\022.mlflow.RestoreRun\032\033.mlflow.Resto" +
-      "reRun.Response\"7\362\206\0313\n\"\n\004POST\022\024/mlflow/ru" +
-      "ns/restore\032\004\010\002\020\000\020\001*\013Restore Run\022u\n\tlogMe" +
-      "tric\022\021.mlflow.LogMetric\032\032.mlflow.LogMetr" +
-      "ic.Response\"9\362\206\0315\n%\n\004POST\022\027/mlflow/runs/" +
-      "log-metric\032\004\010\002\020\000\020\001*\nLog Metric\022t\n\010logPar" +
-      "am\022\020.mlflow.LogParam\032\031.mlflow.LogParam.R" +
-      "esponse\";\362\206\0317\n(\n\004POST\022\032/mlflow/runs/log-" +
-      "parameter\032\004\010\002\020\000\020\001*\tLog Param\022\241\001\n\020setExpe" +
-      "rimentTag\022\030.mlflow.SetExperimentTag\032!.ml" +
-      "flow.SetExperimentTag.Response\"P\362\206\031L\n4\n\004" +
-      "POST\022&/mlflow/experiments/set-experiment" +
-      "-tag\032\004\010\002\020\000\020\001*\022Set Experiment Tag\022\260\001\n\023del" +
-      "eteExperimentTag\022\033.mlflow.DeleteExperime" +
-      "ntTag\032$.mlflow.DeleteExperimentTag.Respo" +
-      "nse\"V\362\206\031R\n7\n\004POST\022)/mlflow/experiments/d" +
-      "elete-experiment-tag\032\004\010\002\020\000\020\001*\025Delete Exp" +
-      "eriment Tag\022f\n\006setTag\022\016.mlflow.SetTag\032\027." +
-      "mlflow.SetTag.Response\"3\362\206\031/\n\"\n\004POST\022\024/m" +
-      "lflow/runs/set-tag\032\004\010\002\020\000\020\001*\007Set Tag\022\210\001\n\013" +
-      "setTraceTag\022\023.mlflow.SetTraceTag\032\034.mlflo" +
-      "w.SetTraceTag.Response\"F\362\206\031B\n/\n\005PATCH\022 /" +
-      "mlflow/traces/{request_id}/tags\032\004\010\002\020\000\020\003*" +
-      "\rSet Trace Tag\022\217\001\n\rsetTraceTagV3\022\025.mlflo" +
-      "w.SetTraceTagV3\032\036.mlflow.SetTraceTagV3.R" +
-      "esponse\"G\362\206\031C\n-\n\005PATCH\022\036/mlflow/traces/{" +
-      "trace_id}/tags\032\004\010\003\020\000\020\003*\020Set Trace Tag V3" +
-      "\022\225\001\n\016deleteTraceTag\022\026.mlflow.DeleteTrace" +
-      "Tag\032\037.mlflow.DeleteTraceTag.Response\"J\362\206" +
-      "\031F\n0\n\006DELETE\022 /mlflow/traces/{request_id" +
-      "}/tags\032\004\010\002\020\000\020\003*\020Delete Trace Tag\022\234\001\n\020del" +
-      "eteTraceTagV3\022\030.mlflow.DeleteTraceTagV3\032" +
-      "!.mlflow.DeleteTraceTagV3.Response\"K\362\206\031G" +
-      "\n.\n\006DELETE\022\036/mlflow/traces/{trace_id}/ta" +
-      "gs\032\004\010\003\020\000\020\003*\023Delete Trace Tag V3\022u\n\tdelet" +
-      "eTag\022\021.mlflow.DeleteTag\032\032.mlflow.DeleteT" +
-      "ag.Response\"9\362\206\0315\n%\n\004POST\022\027/mlflow/runs/" +
-      "delete-tag\032\004\010\002\020\000\020\001*\nDelete Tag\022e\n\006getRun" +
-      "\022\016.mlflow.GetRun\032\027.mlflow.GetRun.Respons" +
-      "e\"2\362\206\031*\n\035\n\003GET\022\020/mlflow/runs/get\032\004\010\002\020\000\020\001" +
-      "*\007Get Run\272\214\031\000\022y\n\nsearchRuns\022\022.mlflow.Sea" +
-      "rchRuns\032\033.mlflow.SearchRuns.Response\":\362\206" +
-      "\0312\n!\n\004POST\022\023/mlflow/runs/search\032\004\010\002\020\000\020\001*" +
-      "\013Search Runs\272\214\031\000\022\207\001\n\rlistArtifacts\022\025.mlf" +
-      "low.ListArtifacts\032\036.mlflow.ListArtifacts" +
-      ".Response\"?\362\206\0317\n#\n\003GET\022\026/mlflow/artifact" +
-      "s/list\032\004\010\002\020\000\020\001*\016List Artifacts\272\214\031\000\022\225\001\n\020g" +
-      "etMetricHistory\022\030.mlflow.GetMetricHistor" +
-      "y\032!.mlflow.GetMetricHistory.Response\"D\362\206" +
-      "\031@\n(\n\003GET\022\033/mlflow/metrics/get-history\032\004" +
-      "\010\002\020\000\020\001*\022Get Metric History\022\267\001\n\034getMetric" +
-      "HistoryBulkInterval\022$.mlflow.GetMetricHi" +
-      "storyBulkInterval\032-.mlflow.GetMetricHist" +
-      "oryBulkInterval.Response\"B\362\206\031:\n6\n\003GET\022)/" +
-      "mlflow/metrics/get-history-bulk-interval" +
-      "\032\004\010\002\020\013\020\003\272\214\031\000\022p\n\010logBatch\022\020.mlflow.LogBat" +
-      "ch\032\031.mlflow.LogBatch.Response\"7\362\206\0313\n$\n\004P" +
-      "OST\022\026/mlflow/runs/log-batch\032\004\010\002\020\000\020\001*\tLog" +
-      " Batch\022p\n\010logModel\022\020.mlflow.LogModel\032\031.m" +
-      "lflow.LogModel.Response\"7\362\206\0313\n$\n\004POST\022\026/" +
-      "mlflow/runs/log-model\032\004\010\002\020\000\020\001*\tLog Model" +
-      "\022u\n\tlogInputs\022\021.mlflow.LogInputs\032\032.mlflo" +
-      "w.LogInputs.Response\"9\362\206\0315\n%\n\004POST\022\027/mlf" +
-      "low/runs/log-inputs\032\004\010\002\020\000\020\001*\nLog Inputs\022" +
-      "v\n\nlogOutputs\022\022.mlflow.LogOutputs\032\033.mlfl" +
-      "ow.LogOutputs.Response\"7\362\206\0313\n\"\n\004POST\022\024/m" +
-      "lflow/runs/outputs\032\004\010\002\020\000\020\003*\013Log Outputs\022" +
-      "\207\001\n\016searchDatasets\022\026.mlflow.SearchDatase" +
-      "ts\032\037.mlflow.SearchDatasets.Response\"<\362\206\031" +
-      "4\n0\n\004POST\022\"mlflow/experiments/search-dat" +
-      "asets\032\004\010\002\020\000\020\003\272\214\031\000\022p\n\nstartTrace\022\022.mlflow" +
-      ".StartTrace\032\033.mlflow.StartTrace.Response" +
-      "\"1\362\206\031-\n\034\n\004POST\022\016/mlflow/traces\032\004\010\002\020\000\020\003*\013" +
-      "Start Trace\022v\n\010endTrace\022\020.mlflow.EndTrac" +
-      "e\032\031.mlflow.EndTrace.Response\"=\362\206\0319\n*\n\005PA" +
-      "TCH\022\033/mlflow/traces/{request_id}\032\004\010\002\020\000\020\003" +
-      "*\tEnd Trace\022\211\001\n\014getTraceInfo\022\024.mlflow.Ge" +
-      "tTraceInfo\032\035.mlflow.GetTraceInfo.Respons" +
-      "e\"D\362\206\031@\n-\n\003GET\022 /mlflow/traces/{request_" +
-      "id}/info\032\004\010\002\020\000\020\003*\rGet TraceInfo\022\213\001\n\016getT" +
-      "raceInfoV3\022\026.mlflow.GetTraceInfoV3\032\037.mlf" +
-      "low.GetTraceInfoV3.Response\"@\362\206\031<\n&\n\003GET" +
-      "\022\031/mlflow/traces/{trace_id}\032\004\010\003\020\000\020\003*\020Get" +
-      " TraceInfo v3\022n\n\010getTrace\022\020.mlflow.GetTr" +
-      "ace\032\031.mlflow.GetTrace.Response\"5\362\206\0311\n\037\n\003" +
-      "GET\022\022/mlflow/traces/get\032\004\010\003\020\000\020\003*\014Get Tra" +
-      "ce v3\022\203\001\n\016batchGetTraces\022\026.mlflow.BatchG" +
-      "etTraces\032\037.mlflow.BatchGetTraces.Respons" +
-      "e\"8\362\206\0314\n$\n\003GET\022\027/mlflow/traces/batchGet\032" +
-      "\004\010\003\020\000\020\003*\nGet Traces\022w\n\014searchTraces\022\024.ml" +
-      "flow.SearchTraces\032\035.mlflow.SearchTraces." +
-      "Response\"2\362\206\031.\n\033\n\003GET\022\016/mlflow/traces\032\004\010" +
-      "\002\020\000\020\003*\rSearch Traces\022\210\001\n\016searchTracesV3\022" +
-      "\026.mlflow.SearchTracesV3\032\037.mlflow.SearchT" +
-      "racesV3.Response\"=\362\206\0319\n#\n\004POST\022\025/mlflow/" +
-      "traces/search\032\004\010\003\020\000\020\003*\020Search Traces V3\022" +
-      "i\n\014startTraceV3\022\024.mlflow.StartTraceV3\032\035." +
-      "mlflow.StartTraceV3.Response\"$\362\206\031 \n\034\n\004PO" +
-      "ST\022\016/mlflow/traces\032\004\010\003\020\000\020\003\022\222\001\n\017linkTrace" +
-      "sToRun\022\027.mlflow.LinkTracesToRun\032 .mlflow" +
-      ".LinkTracesToRun.Response\"D\362\206\031@\n(\n\004POST\022" +
-      "\032/mlflow/traces/link-to-run\032\004\010\002\020\000\020\003*\022Lin" +
-      "k Traces to Run\022\237\001\n\022linkPromptsToTrace\022\032" +
-      ".mlflow.LinkPromptsToTrace\032#.mlflow.Link" +
-      "PromptsToTrace.Response\"H\362\206\031D\n)\n\004POST\022\033/" +
-      "mlflow/traces/link-prompts\032\004\010\002\020\000\020\003*\025Link" +
-      " Prompts to Trace\022\242\001\n\031searchUnifiedTrace" +
-      "Handler\022\033.mlflow.SearchUnifiedTraces\032$.m" +
-      "lflow.SearchUnifiedTraces.Response\"B\362\206\031>" +
-      "\n#\n\003GET\022\026/mlflow/unified-traces\032\004\010\002\020\000\020\003*" +
-      "\025Search Unified Traces\022\257\001\n\025getOnlineTrac" +
-      "eDetails\022\035.mlflow.GetOnlineTraceDetails\032" +
-      "&.mlflow.GetOnlineTraceDetails.Response\"" +
-      "O\362\206\031K\n-\n\003GET\022 /mlflow/get-online-trace-d" +
-      "etails\032\004\010\002\020\000\020\003*\030Get Online Trace Details" +
-      "\022\206\001\n\014deleteTraces\022\024.mlflow.DeleteTraces\032" +
-      "\035.mlflow.DeleteTraces.Response\"A\362\206\031=\n*\n\004" +
-      "POST\022\034/mlflow/traces/delete-traces\032\004\010\002\020\000" +
-      "\020\003*\rDelete Traces\022\217\001\n\016deleteTracesV3\022\026.m" +
-      "lflow.DeleteTracesV3\032\037.mlflow.DeleteTrac" +
-      "esV3.Response\"D\362\206\031@\n*\n\004POST\022\034/mlflow/tra" +
-      "ces/delete-traces\032\004\010\003\020\000\020\003*\020Delete Traces" +
-      " V3\022\343\001\n\037calculateTraceFilterCorrelation\022" +
-      "\'.mlflow.CalculateTraceFilterCorrelation" +
-      "\0320.mlflow.CalculateTraceFilterCorrelatio" +
-      "n.Response\"e\362\206\031a\n9\n\004POST\022+/mlflow/traces" +
-      "/calculate-filter-correlation\032\004\010\003\020\000\020\003*\"C",
-      "alculate Trace Filter Correlation\022\225\001\n\021qu" +
-      "eryTraceMetrics\022\031.mlflow.QueryTraceMetri" +
-      "cs\032\".mlflow.QueryTraceMetrics.Response\"A" +
-      "\362\206\031=\n$\n\004POST\022\026/mlflow/traces/metrics\032\004\010\003" +
-      "\020\000\020\003*\023Query Trace Metrics\022\224\001\n\021createLogg" +
-      "edModel\022\031.mlflow.CreateLoggedModel\032\".mlf" +
-      "low.CreateLoggedModel.Response\"@\362\206\031<\n#\n\004" +
-      "POST\022\025/mlflow/logged-models\032\004\010\002\020\000\020\003*\023Cre" +
-      "ate Logged Model\022\250\001\n\023finalizeLoggedModel" +
-      "\022\033.mlflow.FinalizeLoggedModel\032$.mlflow.F" +
-      "inalizeLoggedModel.Response\"N\362\206\031J\n/\n\005PAT" +
-      "CH\022 /mlflow/logged-models/{model_id}\032\004\010\002" +
-      "\020\000\020\003*\025Finalize Logged Model\022\222\001\n\016getLogge" +
-      "dModel\022\026.mlflow.GetLoggedModel\032\037.mlflow." +
-      "GetLoggedModel.Response\"G\362\206\031C\n-\n\003GET\022 /m" +
-      "lflow/logged-models/{model_id}\032\004\010\002\020\000\020\003*\020" +
-      "Get Logged Model\022\243\001\n\021deleteLoggedModel\022\031" +
-      ".mlflow.DeleteLoggedModel\032\".mlflow.Delet" +
-      "eLoggedModel.Response\"O\362\206\031K\n0\n\006DELETE\022 /" +
-      "mlflow/logged-models/{model_id}\032\004\010\002\020\000\020\003*" +
-      "\025Delete a Logged Model\022\236\001\n\022searchLoggedM" +
-      "odels\022\032.mlflow.SearchLoggedModels\032#.mlfl" +
-      "ow.SearchLoggedModels.Response\"G\362\206\031C\n*\n\004" +
-      "POST\022\034/mlflow/logged-models/search\032\004\010\002\020\000" +
-      "\020\003*\023Search LoggedModels\022\251\001\n\022setLoggedMod" +
-      "elTags\022\032.mlflow.SetLoggedModelTags\032#.mlf" +
-      "low.SetLoggedModelTags.Response\"R\362\206\031N\n4\n" +
-      "\005PATCH\022%/mlflow/logged-models/{model_id}" +
-      "/tags\032\004\010\002\020\000\020\003*\024Set Logged Model Tag\022\275\001\n\024" +
-      "deleteLoggedModelTag\022\034.mlflow.DeleteLogg" +
-      "edModelTag\032%.mlflow.DeleteLoggedModelTag" +
-      ".Response\"`\362\206\031\\\n?\n\006DELETE\022//mlflow/logge" +
-      "d-models/{model_id}/tags/{tag_key}\032\004\010\002\020\000" +
-      "\020\003*\027Delete Logged Model Tag\022\326\001\n\030listLogg" +
-      "edModelArtifacts\022 .mlflow.ListLoggedMode" +
-      "lArtifacts\032).mlflow.ListLoggedModelArtif" +
-      "acts.Response\"m\362\206\031i\nC\n\003GET\0226/mlflow/logg" +
-      "ed-models/{model_id}/artifacts/directori" +
-      "es\032\004\010\002\020\000\020\003* List Artifacts for Logged Mo" +
-      "dels\022\301\001\n\024LogLoggedModelParams\022#.mlflow.L" +
-      "ogLoggedModelParamsRequest\032,.mlflow.LogL" +
-      "oggedModelParamsRequest.Response\"V\362\206\031R\n5" +
-      "\n\004POST\022\'/mlflow/logged-models/{model_id}" +
-      "/params\032\004\010\002\020\000\020\003*\027Log Logged Model Params" +
-      "\022\260\001\n\rGetAssessment\022\034.mlflow.GetAssessmen" +
-      "tRequest\032%.mlflow.GetAssessmentRequest.R" +
-      "esponse\"Z\362\206\031V\nB\n\003GET\0225/mlflow/traces/{tr" +
-      "ace_id}/assessments/{assessment_id}\032\004\010\003\020" +
-      "\000\020\003*\016Get Assessment\022\337\001\n\020createAssessment" +
-      "\022\030.mlflow.CreateAssessment\032!.mlflow.Crea" +
-      "teAssessment.Response\"\215\001\362\206\031\210\001\n>\n\004POST\0220/" +
-      "mlflow/traces/{assessment.trace_id}/asse" +
-      "ssments\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\014\030\001*:Create an ass" +
-      "essment of a trace or a span within the " +
-      "trace\022\320\001\n\020updateAssessment\022\030.mlflow.Upda" +
-      "teAssessment\032!.mlflow.UpdateAssessment.R" +
-      "esponse\"\177\362\206\031{\nD\n\005PATCH\0225/mlflow/traces/{" +
-      "trace_id}/assessments/{assessment_id}\032\004\010" +
-      "\003\020\000\020\003\030\350\007\030\356\007\030\001*)Update an existing assess" +
-      "ment on a trace.\022\261\001\n\020deleteAssessment\022\030." +
-      "mlflow.DeleteAssessment\032!.mlflow.DeleteA" +
-      "ssessment.Response\"`\362\206\031\\\nE\n\006DELETE\0225/mlf" +
-      "low/traces/{trace_id}/assessments/{asses" +
-      "sment_id}\032\004\010\003\020\000\020\003*\021Delete Assessment\022\232\001\n" +
-      "\rcreateDataset\022\025.mlflow.CreateDataset\032\036." +
-      "mlflow.CreateDataset.Response\"R\362\206\031N\n%\n\004P" +
-      "OST\022\027/mlflow/datasets/create\032\004\010\003\020\000\020\003\030\350\007\030" +
-      "\356\007\030\014\030\001*\031Create Evaluation Dataset\022\221\001\n\nge" +
-      "tDataset\022\022.mlflow.GetDataset\032\033.mlflow.Ge" +
-      "tDataset.Response\"R\362\206\031N\n*\n\003GET\022\035/mlflow/" +
-      "datasets/{dataset_id}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\026G" +
-      "et Evaluation Dataset\022\240\001\n\rdeleteDataset\022" +
-      "\025.mlflow.DeleteDataset\032\036.mlflow.DeleteDa" +
-      "taset.Response\"X\362\206\031T\n-\n\006DELETE\022\035/mlflow/" +
-      "datasets/{dataset_id}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\031D" +
-      "elete Evaluation Dataset\022\335\001\n\030searchEvalu" +
-      "ationDatasets\022 .mlflow.SearchEvaluationD" +
-      "atasets\032).mlflow.SearchEvaluationDataset" +
-      "s.Response\"t\362\206\031p\n%\n\004POST\022\027/mlflow/datase" +
-      "ts/search\032\004\010\003\020\000\n$\n\003GET\022\027/mlflow/datasets" +
-      "/search\032\004\010\003\020\000\020\003\030\350\007\030\001*\032Search Evaluation " +
-      "Datasets\022\251\001\n\016setDatasetTags\022\026.mlflow.Set" +
-      "DatasetTags\032\037.mlflow.SetDatasetTags.Resp" +
-      "onse\"^\362\206\031Z\n1\n\005PATCH\022\"/mlflow/datasets/{d" +
-      "ataset_id}/tags\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\033Set Eva" +
-      "luation Dataset Tags\022\270\001\n\020deleteDatasetTa" +
-      "g\022\030.mlflow.DeleteDatasetTag\032!.mlflow.Del" +
-      "eteDatasetTag.Response\"g\362\206\031c\n8\n\006DELETE\022(" +
-      "/mlflow/datasets/{dataset_id}/tags/{key}" +
-      "\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\035Delete Evaluation Data" +
-      "set Tag\022\303\001\n\024upsertDatasetRecords\022\034.mlflo" +
-      "w.UpsertDatasetRecords\032%.mlflow.UpsertDa" +
-      "tasetRecords.Response\"f\362\206\031b\n3\n\004POST\022%/ml" +
-      "flow/datasets/{dataset_id}/records\032\004\010\003\020\000" +
-      "\020\003\030\350\007\030\272\027\030\001*!Upsert Evaluation Dataset Re" +
-      "cords\022\326\001\n\027getDatasetExperimentIds\022\037.mlfl" +
-      "ow.GetDatasetExperimentIds\032(.mlflow.GetD" +
-      "atasetExperimentIds.Response\"p\362\206\031l\n9\n\003GE" +
-      "T\022,/mlflow/datasets/{dataset_id}/experim" +
-      "ent-ids\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*%Get Evaluation " +
-      "Dataset Experiment IDs\022\212\001\n\016registerScore" +
-      "r\022\026.mlflow.RegisterScorer\032\037.mlflow.Regis" +
-      "terScorer.Response\"?\362\206\031;\n&\n\004POST\022\030/mlflo" +
-      "w/scorers/register\032\004\010\003\020\000\020\001*\017Register Sco" +
-      "rer\022y\n\013listScorers\022\023.mlflow.ListScorers\032" +
-      "\034.mlflow.ListScorers.Response\"7\362\206\0313\n!\n\003G" +
-      "ET\022\024/mlflow/scorers/list\032\004\010\003\020\000\020\001*\014List S" +
-      "corers\022\232\001\n\022listScorerVersions\022\032.mlflow.L" +
-      "istScorerVersions\032#.mlflow.ListScorerVer" +
-      "sions.Response\"C\362\206\031?\n%\n\003GET\022\030/mlflow/sco" +
-      "rers/versions\032\004\010\003\020\000\020\001*\024List Scorer Versi" +
-      "ons\022p\n\tgetScorer\022\021.mlflow.GetScorer\032\032.ml" +
-      "flow.GetScorer.Response\"4\362\206\0310\n \n\003GET\022\023/m" +
-      "lflow/scorers/get\032\004\010\003\020\000\020\001*\nGet Scorer\022\202\001" +
-      "\n\014deleteScorer\022\024.mlflow.DeleteScorer\032\035.m" +
-      "lflow.DeleteScorer.Response\"=\362\206\0319\n&\n\006DEL" +
-      "ETE\022\026/mlflow/scorers/delete\032\004\010\003\020\000\020\001*\rDel" +
-      "ete Scorer\022\266\001\n\021getDatasetRecords\022\031.mlflo" +
-      "w.GetDatasetRecords\032\".mlflow.GetDatasetR" +
-      "ecords.Response\"b\362\206\031^\n2\n\003GET\022%/mlflow/da" +
-      "tasets/{dataset_id}/records\032\004\010\003\020\000\020\003\030\350\007\030\272" +
-      "\027\030\001*\036Get Evaluation Dataset Records\022\315\001\n\027" +
-      "addDatasetToExperiments\022\037.mlflow.AddData" +
-      "setToExperiments\032(.mlflow.AddDatasetToEx" +
-      "periments.Response\"g\362\206\031c\n;\n\004POST\022-/mlflo" +
-      "w/datasets/{dataset_id}/add-experiments\032" +
-      "\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\032Add Dataset to Experime" +
-      "nts\022\344\001\n\034removeDatasetFromExperiments\022$.m" +
-      "lflow.RemoveDatasetFromExperiments\032-.mlf" +
-      "low.RemoveDatasetFromExperiments.Respons" +
-      "e\"o\362\206\031k\n>\n\004POST\0220/mlflow/datasets/{datas" +
-      "et_id}/remove-experiments\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030" +
-      "\001*\037Remove Dataset from Experiments\022\245\001\n\023c" +
-      "reateGatewaySecret\022\033.mlflow.CreateGatewa" +
-      "ySecret\032$.mlflow.CreateGatewaySecret.Res" +
-      "ponse\"K\362\206\031G\n,\n\004POST\022\036/mlflow/gateway/sec" +
-      "rets/create\032\004\010\003\020\000\020\001*\025Create Gateway Secr" +
-      "et\022\246\001\n\024getGatewaySecretInfo\022\034.mlflow.Get" +
-      "GatewaySecretInfo\032%.mlflow.GetGatewaySec" +
-      "retInfo.Response\"I\362\206\031E\n(\n\003GET\022\033/mlflow/g" +
-      "ateway/secrets/get\032\004\010\003\020\000\020\001*\027Get Gateway " +
-      "Secret Info\022\245\001\n\023updateGatewaySecret\022\033.ml" +
-      "flow.UpdateGatewaySecret\032$.mlflow.Update" +
-      "GatewaySecret.Response\"K\362\206\031G\n,\n\004POST\022\036/m" +
-      "lflow/gateway/secrets/update\032\004\010\003\020\000\020\001*\025Up" +
-      "date Gateway Secret\022\247\001\n\023deleteGatewaySec" +
-      "ret\022\033.mlflow.DeleteGatewaySecret\032$.mlflo" +
-      "w.DeleteGatewaySecret.Response\"M\362\206\031I\n.\n\006" +
-      "DELETE\022\036/mlflow/gateway/secrets/delete\032\004" +
-      "\010\003\020\000\020\001*\025Delete Gateway Secret\022\252\001\n\026listGa" +
-      "tewaySecretInfos\022\036.mlflow.ListGatewaySec" +
-      "retInfos\032\'.mlflow.ListGatewaySecretInfos" +
-      ".Response\"G\362\206\031C\n)\n\003GET\022\034/mlflow/gateway/" +
-      "secrets/list\032\004\010\003\020\000\020\001*\024List Gateway Secre" +
-      "ts\022\257\001\n\025createGatewayEndpoint\022\035.mlflow.Cr" +
-      "eateGatewayEndpoint\032&.mlflow.CreateGatew" +
-      "ayEndpoint.Response\"O\362\206\031K\n.\n\004POST\022 /mlfl" +
-      "ow/gateway/endpoints/create\032\004\010\003\020\000\020\001*\027Cre" +
-      "ate Gateway Endpoint\022\237\001\n\022getGatewayEndpo" +
-      "int\022\032.mlflow.GetGatewayEndpoint\032#.mlflow" +
-      ".GetGatewayEndpoint.Response\"H\362\206\031D\n*\n\003GE" +
-      "T\022\035/mlflow/gateway/endpoints/get\032\004\010\003\020\000\020\001" +
-      "*\024Get Gateway Endpoint\022\257\001\n\025updateGateway" +
-      "Endpoint\022\035.mlflow.UpdateGatewayEndpoint\032" +
-      "&.mlflow.UpdateGatewayEndpoint.Response\"" +
-      "O\362\206\031K\n.\n\004POST\022 /mlflow/gateway/endpoints" +
-      "/update\032\004\010\003\020\000\020\001*\027Update Gateway Endpoint" +
-      "\022\261\001\n\025deleteGatewayEndpoint\022\035.mlflow.Dele" +
-      "teGatewayEndpoint\032&.mlflow.DeleteGateway" +
-      "Endpoint.Response\"Q\362\206\031M\n0\n\006DELETE\022 /mlfl" +
-      "ow/gateway/endpoints/delete\032\004\010\003\020\000\020\001*\027Del" +
-      "ete Gateway Endpoint\022\250\001\n\024listGatewayEndp" +
-      "oints\022\034.mlflow.ListGatewayEndpoints\032%.ml" +
-      "flow.ListGatewayEndpoints.Response\"K\362\206\031G" +
-      "\n+\n\003GET\022\036/mlflow/gateway/endpoints/list\032" +
-      "\004\010\003\020\000\020\001*\026List Gateway Endpoints\022\324\001\n\034crea" +
-      "teGatewayModelDefinition\022$.mlflow.Create" +
-      "GatewayModelDefinition\032-.mlflow.CreateGa" +
-      "tewayModelDefinition.Response\"_\362\206\031[\n6\n\004P" +
-      "OST\022(/mlflow/gateway/model-definitions/c" +
-      "reate\032\004\010\003\020\000\020\001*\037Create Gateway Model Defi" +
-      "nition\022\304\001\n\031getGatewayModelDefinition\022!.m" +
-      "lflow.GetGatewayModelDefinition\032*.mlflow" +
-      ".GetGatewayModelDefinition.Response\"X\362\206\031" +
-      "T\n2\n\003GET\022%/mlflow/gateway/model-definiti" +
-      "ons/get\032\004\010\003\020\000\020\001*\034Get Gateway Model Defin" +
-      "ition\022\315\001\n\033listGatewayModelDefinitions\022#." +
-      "mlflow.ListGatewayModelDefinitions\032,.mlf" +
-      "low.ListGatewayModelDefinitions.Response" +
-      "\"[\362\206\031W\n3\n\003GET\022&/mlflow/gateway/model-def" +
-      "initions/list\032\004\010\003\020\000\020\001*\036List Gateway Mode" +
-      "l Definitions\022\324\001\n\034updateGatewayModelDefi" +
-      "nition\022$.mlflow.UpdateGatewayModelDefini" +
-      "tion\032-.mlflow.UpdateGatewayModelDefiniti" +
-      "on.Response\"_\362\206\031[\n6\n\004POST\022(/mlflow/gatew" +
-      "ay/model-definitions/update\032\004\010\003\020\000\020\001*\037Upd" +
-      "ate Gateway Model Definition\022\326\001\n\034deleteG" +
-      "atewayModelDefinition\022$.mlflow.DeleteGat" +
-      "ewayModelDefinition\032-.mlflow.DeleteGatew" +
-      "ayModelDefinition.Response\"a\362\206\031]\n8\n\006DELE" +
-      "TE\022(/mlflow/gateway/model-definitions/de" +
-      "lete\032\004\010\003\020\000\020\001*\037Delete Gateway Model Defin" +
-      "ition\022\305\001\n\025attachModelToEndpoint\022$.mlflow" +
-      ".AttachModelToGatewayEndpoint\032-.mlflow.A" +
-      "ttachModelToGatewayEndpoint.Response\"W\362\206" +
-      "\031S\n5\n\004POST\022\'/mlflow/gateway/endpoints/mo" +
-      "dels/attach\032\004\010\003\020\000\020\001*\030Attach Model to End" +
-      "point\022\315\001\n\027detachModelFromEndpoint\022&.mlfl" +
-      "ow.DetachModelFromGatewayEndpoint\032/.mlfl" +
-      "ow.DetachModelFromGatewayEndpoint.Respon" +
-      "se\"Y\362\206\031U\n5\n\004POST\022\'/mlflow/gateway/endpoi" +
-      "nts/models/detach\032\004\010\003\020\000\020\001*\032Detach Model " +
-      "from Endpoint\022\306\001\n\025createEndpointBinding\022" +
-      "$.mlflow.CreateGatewayEndpointBinding\032-." +
-      "mlflow.CreateGatewayEndpointBinding.Resp" +
-      "onse\"X\362\206\031T\n7\n\004POST\022)/mlflow/gateway/endp" +
-      "oints/bindings/create\032\004\010\003\020\000\020\001*\027Create En" +
-      "dpoint Binding\022\310\001\n\025deleteEndpointBinding" +
-      "\022$.mlflow.DeleteGatewayEndpointBinding\032-" +
-      ".mlflow.DeleteGatewayEndpointBinding.Res" +
-      "ponse\"Z\362\206\031V\n9\n\006DELETE\022)/mlflow/gateway/e" +
-      "ndpoints/bindings/delete\032\004\010\003\020\000\020\001*\027Delete" +
-      " Endpoint Binding\022\277\001\n\024listEndpointBindin" +
-      "gs\022#.mlflow.ListGatewayEndpointBindings\032" +
-      ",.mlflow.ListGatewayEndpointBindings.Res" +
-      "ponse\"T\362\206\031P\n4\n\003GET\022\'/mlflow/gateway/endp" +
-      "oints/bindings/list\032\004\010\003\020\000\020\001*\026List Endpoi" +
-      "nt Bindings\022\261\001\n\025setGatewayEndpointTag\022\035." +
-      "mlflow.SetGatewayEndpointTag\032&.mlflow.Se" +
-      "tGatewayEndpointTag.Response\"Q\362\206\031M\n/\n\004PO" +
-      "ST\022!/mlflow/gateway/endpoints/set-tag\032\004\010" +
-      "\003\020\000\020\001*\030Gateway Set Endpoint Tag\022\302\001\n\030dele" +
-      "teGatewayEndpointTag\022 .mlflow.DeleteGate" +
-      "wayEndpointTag\032).mlflow.DeleteGatewayEnd" +
-      "pointTag.Response\"Y\362\206\031U\n4\n\006DELETE\022$/mlfl" +
-      "ow/gateway/endpoints/delete-tag\032\004\010\003\020\000\020\001*" +
-      "\033Gateway Delete Endpoint Tag\022\320\001\n\033createP" +
-      "romptOptimizationJob\022#.mlflow.CreateProm" +
-      "ptOptimizationJob\032,.mlflow.CreatePromptO" +
-      "ptimizationJob.Response\"^\362\206\031Z\n.\n\004POST\022 /" +
-      "mlflow/prompt-optimization/jobs\032\004\010\003\020\000\020\001\030" +
-      "\350\007\030\272\027\030\001*\036Create Prompt Optimization Job\022" +
-      "\343\001\n\033cancelPromptOptimizationJob\022#.mlflow" +
-      ".CancelPromptOptimizationJob\032,.mlflow.Ca" +
-      "ncelPromptOptimizationJob.Response\"q\362\206\031m" +
-      "\n>\n\004POST\0220/mlflow/prompt-optimization/jo" +
-      "bs/{job_id}/cancel\032\004\010\003\020\000\020\001\030\350\007\030\272\027\030\353\007\030\001*\036C" +
-      "ancel Prompt Optimization JobB\036\n\024org.mlf" +
-      "low.api.proto\220\001\001\342?\002\020\001"
+      "romptOptimizationJob\"b\n\030GetPromptOptimiz" +
+      "ationJob\022\016\n\006job_id\030\001 \001(\t\0326\n\010Response\022*\n\003" +
+      "job\030\001 \001(\0132\035.mlflow.PromptOptimizationJob" +
+      "\"n\n\034SearchPromptOptimizationJobs\022\025\n\rexpe" +
+      "riment_id\030\001 \001(\t\0327\n\010Response\022+\n\004jobs\030\001 \003(" +
+      "\0132\035.mlflow.PromptOptimizationJob\"e\n\033Canc" +
+      "elPromptOptimizationJob\022\016\n\006job_id\030\001 \001(\t\032" +
+      "6\n\010Response\022*\n\003job\030\001 \001(\0132\035.mlflow.Prompt" +
+      "OptimizationJob\"9\n\033DeletePromptOptimizat" +
+      "ionJob\022\016\n\006job_id\030\001 \001(\t\032\n\n\010Response*6\n\010Vi" +
+      "ewType\022\017\n\013ACTIVE_ONLY\020\001\022\020\n\014DELETED_ONLY\020" +
+      "\002\022\007\n\003ALL\020\003*I\n\nSourceType\022\014\n\010NOTEBOOK\020\001\022\007" +
+      "\n\003JOB\020\002\022\013\n\007PROJECT\020\003\022\t\n\005LOCAL\020\004\022\014\n\007UNKNO" +
+      "WN\020\350\007*M\n\tRunStatus\022\013\n\007RUNNING\020\001\022\r\n\tSCHED" +
+      "ULED\020\002\022\014\n\010FINISHED\020\003\022\n\n\006FAILED\020\004\022\n\n\006KILL" +
+      "ED\020\005*O\n\013TraceStatus\022\034\n\030TRACE_STATUS_UNSP" +
+      "ECIFIED\020\000\022\006\n\002OK\020\001\022\t\n\005ERROR\020\002\022\017\n\013IN_PROGR" +
+      "ESS\020\003*8\n\016MetricViewType\022\n\n\006TRACES\020\001\022\t\n\005S" +
+      "PANS\020\002\022\017\n\013ASSESSMENTS\020\003*P\n\017AggregationTy" +
+      "pe\022\t\n\005COUNT\020\001\022\007\n\003SUM\020\002\022\007\n\003AVG\020\003\022\016\n\nPERCE" +
+      "NTILE\020\004\022\007\n\003MIN\020\005\022\007\n\003MAX\020\006*\212\001\n\021LoggedMode" +
+      "lStatus\022#\n\037LOGGED_MODEL_STATUS_UNSPECIFI" +
+      "ED\020\000\022\030\n\024LOGGED_MODEL_PENDING\020\001\022\026\n\022LOGGED" +
+      "_MODEL_READY\020\002\022\036\n\032LOGGED_MODEL_UPLOAD_FA" +
+      "ILED\020\003*Z\n\017RoutingStrategy\022&\n\034ROUTING_STR" +
+      "ATEGY_UNSPECIFIED\020\000\032\004\360\206\031\003\022\037\n\033REQUEST_BAS" +
+      "ED_TRAFFIC_SPLIT\020\001*K\n\020FallbackStrategy\022\'" +
+      "\n\035FALLBACK_STRATEGY_UNSPECIFIED\020\000\032\004\360\206\031\003\022" +
+      "\016\n\nSEQUENTIAL\020\001*X\n\027GatewayModelLinkageTy" +
+      "pe\022\"\n\030LINKAGE_TYPE_UNSPECIFIED\020\000\032\004\360\206\031\003\022\013" +
+      "\n\007PRIMARY\020\001\022\014\n\010FALLBACK\020\0022\227\206\001\n\rMlflowSer" +
+      "vice\022\246\001\n\023getExperimentByName\022\033.mlflow.Ge" +
+      "tExperimentByName\032$.mlflow.GetExperiment" +
+      "ByName.Response\"L\362\206\031H\n,\n\003GET\022\037/mlflow/ex" +
+      "periments/get-by-name\032\004\010\002\020\000\020\001*\026Get Exper" +
+      "iment By Name\022\224\001\n\020createExperiment\022\030.mlf" +
+      "low.CreateExperiment\032!.mlflow.CreateExpe" +
+      "riment.Response\"C\362\206\031?\n(\n\004POST\022\032/mlflow/e" +
+      "xperiments/create\032\004\010\002\020\000\020\001*\021Create Experi" +
+      "ment\022\301\001\n\021searchExperiments\022\031.mlflow.Sear" +
+      "chExperiments\032\".mlflow.SearchExperiments" +
+      ".Response\"m\362\206\031i\n(\n\004POST\022\032/mlflow/experim" +
+      "ents/search\032\004\010\002\020\000\n\'\n\003GET\022\032/mlflow/experi" +
+      "ments/search\032\004\010\002\020\000\020\001*\022Search Experiments" +
+      "\022\210\001\n\rgetExperiment\022\025.mlflow.GetExperimen" +
+      "t\032\036.mlflow.GetExperiment.Response\"@\362\206\0318\n" +
+      "$\n\003GET\022\027/mlflow/experiments/get\032\004\010\002\020\000\020\001*" +
+      "\016Get Experiment\272\214\031\000\022\224\001\n\020deleteExperiment" +
+      "\022\030.mlflow.DeleteExperiment\032!.mlflow.Dele" +
+      "teExperiment.Response\"C\362\206\031?\n(\n\004POST\022\032/ml" +
+      "flow/experiments/delete\032\004\010\002\020\000\020\001*\021Delete " +
+      "Experiment\022\231\001\n\021restoreExperiment\022\031.mlflo" +
+      "w.RestoreExperiment\032\".mlflow.RestoreExpe" +
+      "riment.Response\"E\362\206\031A\n)\n\004POST\022\033/mlflow/e" +
+      "xperiments/restore\032\004\010\002\020\000\020\001*\022Restore Expe" +
+      "riment\022\224\001\n\020updateExperiment\022\030.mlflow.Upd" +
+      "ateExperiment\032!.mlflow.UpdateExperiment." +
+      "Response\"C\362\206\031?\n(\n\004POST\022\032/mlflow/experime" +
+      "nts/update\032\004\010\002\020\000\020\001*\021Update Experiment\022q\n" +
+      "\tcreateRun\022\021.mlflow.CreateRun\032\032.mlflow.C" +
+      "reateRun.Response\"5\362\206\0311\n!\n\004POST\022\023/mlflow" +
+      "/runs/create\032\004\010\002\020\000\020\001*\nCreate Run\022q\n\tupda" +
+      "teRun\022\021.mlflow.UpdateRun\032\032.mlflow.Update" +
+      "Run.Response\"5\362\206\0311\n!\n\004POST\022\023/mlflow/runs" +
+      "/update\032\004\010\002\020\000\020\001*\nUpdate Run\022q\n\tdeleteRun" +
+      "\022\021.mlflow.DeleteRun\032\032.mlflow.DeleteRun.R" +
+      "esponse\"5\362\206\0311\n!\n\004POST\022\023/mlflow/runs/dele" +
+      "te\032\004\010\002\020\000\020\001*\nDelete Run\022v\n\nrestoreRun\022\022.m" +
+      "lflow.RestoreRun\032\033.mlflow.RestoreRun.Res" +
+      "ponse\"7\362\206\0313\n\"\n\004POST\022\024/mlflow/runs/restor" +
+      "e\032\004\010\002\020\000\020\001*\013Restore Run\022u\n\tlogMetric\022\021.ml" +
+      "flow.LogMetric\032\032.mlflow.LogMetric.Respon" +
+      "se\"9\362\206\0315\n%\n\004POST\022\027/mlflow/runs/log-metri" +
+      "c\032\004\010\002\020\000\020\001*\nLog Metric\022t\n\010logParam\022\020.mlfl" +
+      "ow.LogParam\032\031.mlflow.LogParam.Response\";" +
+      "\362\206\0317\n(\n\004POST\022\032/mlflow/runs/log-parameter" +
+      "\032\004\010\002\020\000\020\001*\tLog Param\022\241\001\n\020setExperimentTag" +
+      "\022\030.mlflow.SetExperimentTag\032!.mlflow.SetE" +
+      "xperimentTag.Response\"P\362\206\031L\n4\n\004POST\022&/ml" +
+      "flow/experiments/set-experiment-tag\032\004\010\002\020" +
+      "\000\020\001*\022Set Experiment Tag\022\260\001\n\023deleteExperi" +
+      "mentTag\022\033.mlflow.DeleteExperimentTag\032$.m" +
+      "lflow.DeleteExperimentTag.Response\"V\362\206\031R" +
+      "\n7\n\004POST\022)/mlflow/experiments/delete-exp" +
+      "eriment-tag\032\004\010\002\020\000\020\001*\025Delete Experiment T" +
+      "ag\022f\n\006setTag\022\016.mlflow.SetTag\032\027.mlflow.Se" +
+      "tTag.Response\"3\362\206\031/\n\"\n\004POST\022\024/mlflow/run" +
+      "s/set-tag\032\004\010\002\020\000\020\001*\007Set Tag\022\210\001\n\013setTraceT" +
+      "ag\022\023.mlflow.SetTraceTag\032\034.mlflow.SetTrac" +
+      "eTag.Response\"F\362\206\031B\n/\n\005PATCH\022 /mlflow/tr" +
+      "aces/{request_id}/tags\032\004\010\002\020\000\020\003*\rSet Trac" +
+      "e Tag\022\217\001\n\rsetTraceTagV3\022\025.mlflow.SetTrac" +
+      "eTagV3\032\036.mlflow.SetTraceTagV3.Response\"G" +
+      "\362\206\031C\n-\n\005PATCH\022\036/mlflow/traces/{trace_id}" +
+      "/tags\032\004\010\003\020\000\020\003*\020Set Trace Tag V3\022\225\001\n\016dele" +
+      "teTraceTag\022\026.mlflow.DeleteTraceTag\032\037.mlf" +
+      "low.DeleteTraceTag.Response\"J\362\206\031F\n0\n\006DEL" +
+      "ETE\022 /mlflow/traces/{request_id}/tags\032\004\010" +
+      "\002\020\000\020\003*\020Delete Trace Tag\022\234\001\n\020deleteTraceT" +
+      "agV3\022\030.mlflow.DeleteTraceTagV3\032!.mlflow." +
+      "DeleteTraceTagV3.Response\"K\362\206\031G\n.\n\006DELET" +
+      "E\022\036/mlflow/traces/{trace_id}/tags\032\004\010\003\020\000\020" +
+      "\003*\023Delete Trace Tag V3\022u\n\tdeleteTag\022\021.ml" +
+      "flow.DeleteTag\032\032.mlflow.DeleteTag.Respon" +
+      "se\"9\362\206\0315\n%\n\004POST\022\027/mlflow/runs/delete-ta" +
+      "g\032\004\010\002\020\000\020\001*\nDelete Tag\022e\n\006getRun\022\016.mlflow" +
+      ".GetRun\032\027.mlflow.GetRun.Response\"2\362\206\031*\n\035" +
+      "\n\003GET\022\020/mlflow/runs/get\032\004\010\002\020\000\020\001*\007Get Run" +
+      "\272\214\031\000\022y\n\nsearchRuns\022\022.mlflow.SearchRuns\032\033" +
+      ".mlflow.SearchRuns.Response\":\362\206\0312\n!\n\004POS" +
+      "T\022\023/mlflow/runs/search\032\004\010\002\020\000\020\001*\013Search R" +
+      "uns\272\214\031\000\022\207\001\n\rlistArtifacts\022\025.mlflow.ListA" +
+      "rtifacts\032\036.mlflow.ListArtifacts.Response" +
+      "\"?\362\206\0317\n#\n\003GET\022\026/mlflow/artifacts/list\032\004\010" +
+      "\002\020\000\020\001*\016List Artifacts\272\214\031\000\022\225\001\n\020getMetricH" +
+      "istory\022\030.mlflow.GetMetricHistory\032!.mlflo" +
+      "w.GetMetricHistory.Response\"D\362\206\031@\n(\n\003GET" +
+      "\022\033/mlflow/metrics/get-history\032\004\010\002\020\000\020\001*\022G" +
+      "et Metric History\022\267\001\n\034getMetricHistoryBu" +
+      "lkInterval\022$.mlflow.GetMetricHistoryBulk" +
+      "Interval\032-.mlflow.GetMetricHistoryBulkIn" +
+      "terval.Response\"B\362\206\031:\n6\n\003GET\022)/mlflow/me" +
+      "trics/get-history-bulk-interval\032\004\010\002\020\013\020\003\272" +
+      "\214\031\000\022p\n\010logBatch\022\020.mlflow.LogBatch\032\031.mlfl" +
+      "ow.LogBatch.Response\"7\362\206\0313\n$\n\004POST\022\026/mlf" +
+      "low/runs/log-batch\032\004\010\002\020\000\020\001*\tLog Batch\022p\n" +
+      "\010logModel\022\020.mlflow.LogModel\032\031.mlflow.Log" +
+      "Model.Response\"7\362\206\0313\n$\n\004POST\022\026/mlflow/ru" +
+      "ns/log-model\032\004\010\002\020\000\020\001*\tLog Model\022u\n\tlogIn" +
+      "puts\022\021.mlflow.LogInputs\032\032.mlflow.LogInpu" +
+      "ts.Response\"9\362\206\0315\n%\n\004POST\022\027/mlflow/runs/" +
+      "log-inputs\032\004\010\002\020\000\020\001*\nLog Inputs\022v\n\nlogOut" +
+      "puts\022\022.mlflow.LogOutputs\032\033.mlflow.LogOut" +
+      "puts.Response\"7\362\206\0313\n\"\n\004POST\022\024/mlflow/run" +
+      "s/outputs\032\004\010\002\020\000\020\003*\013Log Outputs\022\207\001\n\016searc" +
+      "hDatasets\022\026.mlflow.SearchDatasets\032\037.mlfl" +
+      "ow.SearchDatasets.Response\"<\362\206\0314\n0\n\004POST" +
+      "\022\"mlflow/experiments/search-datasets\032\004\010\002" +
+      "\020\000\020\003\272\214\031\000\022p\n\nstartTrace\022\022.mlflow.StartTra" +
+      "ce\032\033.mlflow.StartTrace.Response\"1\362\206\031-\n\034\n" +
+      "\004POST\022\016/mlflow/traces\032\004\010\002\020\000\020\003*\013Start Tra" +
+      "ce\022v\n\010endTrace\022\020.mlflow.EndTrace\032\031.mlflo" +
+      "w.EndTrace.Response\"=\362\206\0319\n*\n\005PATCH\022\033/mlf" +
+      "low/traces/{request_id}\032\004\010\002\020\000\020\003*\tEnd Tra" +
+      "ce\022\211\001\n\014getTraceInfo\022\024.mlflow.GetTraceInf" +
+      "o\032\035.mlflow.GetTraceInfo.Response\"D\362\206\031@\n-" +
+      "\n\003GET\022 /mlflow/traces/{request_id}/info\032" +
+      "\004\010\002\020\000\020\003*\rGet TraceInfo\022\213\001\n\016getTraceInfoV" +
+      "3\022\026.mlflow.GetTraceInfoV3\032\037.mlflow.GetTr" +
+      "aceInfoV3.Response\"@\362\206\031<\n&\n\003GET\022\031/mlflow" +
+      "/traces/{trace_id}\032\004\010\003\020\000\020\003*\020Get TraceInf" +
+      "o v3\022n\n\010getTrace\022\020.mlflow.GetTrace\032\031.mlf" +
+      "low.GetTrace.Response\"5\362\206\0311\n\037\n\003GET\022\022/mlf" +
+      "low/traces/get\032\004\010\003\020\000\020\003*\014Get Trace v3\022\203\001\n" +
+      "\016batchGetTraces\022\026.mlflow.BatchGetTraces\032" +
+      "\037.mlflow.BatchGetTraces.Response\"8\362\206\0314\n$" +
+      "\n\003GET\022\027/mlflow/traces/batchGet\032\004\010\003\020\000\020\003*\n" +
+      "Get Traces\022w\n\014searchTraces\022\024.mlflow.Sear" +
+      "chTraces\032\035.mlflow.SearchTraces.Response\"" +
+      "2\362\206\031.\n\033\n\003GET\022\016/mlflow/traces\032\004\010\002\020\000\020\003*\rSe" +
+      "arch Traces\022\210\001\n\016searchTracesV3\022\026.mlflow." +
+      "SearchTracesV3\032\037.mlflow.SearchTracesV3.R" +
+      "esponse\"=\362\206\0319\n#\n\004POST\022\025/mlflow/traces/se" +
+      "arch\032\004\010\003\020\000\020\003*\020Search Traces V3\022i\n\014startT" +
+      "raceV3\022\024.mlflow.StartTraceV3\032\035.mlflow.St" +
+      "artTraceV3.Response\"$\362\206\031 \n\034\n\004POST\022\016/mlfl" +
+      "ow/traces\032\004\010\003\020\000\020\003\022\222\001\n\017linkTracesToRun\022\027." +
+      "mlflow.LinkTracesToRun\032 .mlflow.LinkTrac" +
+      "esToRun.Response\"D\362\206\031@\n(\n\004POST\022\032/mlflow/" +
+      "traces/link-to-run\032\004\010\002\020\000\020\003*\022Link Traces " +
+      "to Run\022\237\001\n\022linkPromptsToTrace\022\032.mlflow.L" +
+      "inkPromptsToTrace\032#.mlflow.LinkPromptsTo" +
+      "Trace.Response\"H\362\206\031D\n)\n\004POST\022\033/mlflow/tr" +
+      "aces/link-prompts\032\004\010\002\020\000\020\003*\025Link Prompts " +
+      "to Trace\022\242\001\n\031searchUnifiedTraceHandler\022\033" +
+      ".mlflow.SearchUnifiedTraces\032$.mlflow.Sea" +
+      "rchUnifiedTraces.Response\"B\362\206\031>\n#\n\003GET\022\026" +
+      "/mlflow/unified-traces\032\004\010\002\020\000\020\003*\025Search U" +
+      "nified Traces\022\257\001\n\025getOnlineTraceDetails\022" +
+      "\035.mlflow.GetOnlineTraceDetails\032&.mlflow." +
+      "GetOnlineTraceDetails.Response\"O\362\206\031K\n-\n\003" +
+      "GET\022 /mlflow/get-online-trace-details\032\004\010" +
+      "\002\020\000\020\003*\030Get Online Trace Details\022\206\001\n\014dele" +
+      "teTraces\022\024.mlflow.DeleteTraces\032\035.mlflow." +
+      "DeleteTraces.Response\"A\362\206\031=\n*\n\004POST\022\034/ml" +
+      "flow/traces/delete-traces\032\004\010\002\020\000\020\003*\rDelet" +
+      "e Traces\022\217\001\n\016deleteTracesV3\022\026.mlflow.Del" +
+      "eteTracesV3\032\037.mlflow.DeleteTracesV3.Resp",
+      "onse\"D\362\206\031@\n*\n\004POST\022\034/mlflow/traces/delet" +
+      "e-traces\032\004\010\003\020\000\020\003*\020Delete Traces V3\022\343\001\n\037c" +
+      "alculateTraceFilterCorrelation\022\'.mlflow." +
+      "CalculateTraceFilterCorrelation\0320.mlflow" +
+      ".CalculateTraceFilterCorrelation.Respons" +
+      "e\"e\362\206\031a\n9\n\004POST\022+/mlflow/traces/calculat" +
+      "e-filter-correlation\032\004\010\003\020\000\020\003*\"Calculate " +
+      "Trace Filter Correlation\022\225\001\n\021queryTraceM" +
+      "etrics\022\031.mlflow.QueryTraceMetrics\032\".mlfl" +
+      "ow.QueryTraceMetrics.Response\"A\362\206\031=\n$\n\004P" +
+      "OST\022\026/mlflow/traces/metrics\032\004\010\003\020\000\020\003*\023Que" +
+      "ry Trace Metrics\022\224\001\n\021createLoggedModel\022\031" +
+      ".mlflow.CreateLoggedModel\032\".mlflow.Creat" +
+      "eLoggedModel.Response\"@\362\206\031<\n#\n\004POST\022\025/ml" +
+      "flow/logged-models\032\004\010\002\020\000\020\003*\023Create Logge" +
+      "d Model\022\250\001\n\023finalizeLoggedModel\022\033.mlflow" +
+      ".FinalizeLoggedModel\032$.mlflow.FinalizeLo" +
+      "ggedModel.Response\"N\362\206\031J\n/\n\005PATCH\022 /mlfl" +
+      "ow/logged-models/{model_id}\032\004\010\002\020\000\020\003*\025Fin" +
+      "alize Logged Model\022\222\001\n\016getLoggedModel\022\026." +
+      "mlflow.GetLoggedModel\032\037.mlflow.GetLogged" +
+      "Model.Response\"G\362\206\031C\n-\n\003GET\022 /mlflow/log" +
+      "ged-models/{model_id}\032\004\010\002\020\000\020\003*\020Get Logge" +
+      "d Model\022\243\001\n\021deleteLoggedModel\022\031.mlflow.D" +
+      "eleteLoggedModel\032\".mlflow.DeleteLoggedMo" +
+      "del.Response\"O\362\206\031K\n0\n\006DELETE\022 /mlflow/lo" +
+      "gged-models/{model_id}\032\004\010\002\020\000\020\003*\025Delete a" +
+      " Logged Model\022\236\001\n\022searchLoggedModels\022\032.m" +
+      "lflow.SearchLoggedModels\032#.mlflow.Search" +
+      "LoggedModels.Response\"G\362\206\031C\n*\n\004POST\022\034/ml" +
+      "flow/logged-models/search\032\004\010\002\020\000\020\003*\023Searc" +
+      "h LoggedModels\022\251\001\n\022setLoggedModelTags\022\032." +
+      "mlflow.SetLoggedModelTags\032#.mlflow.SetLo" +
+      "ggedModelTags.Response\"R\362\206\031N\n4\n\005PATCH\022%/" +
+      "mlflow/logged-models/{model_id}/tags\032\004\010\002" +
+      "\020\000\020\003*\024Set Logged Model Tag\022\275\001\n\024deleteLog" +
+      "gedModelTag\022\034.mlflow.DeleteLoggedModelTa" +
+      "g\032%.mlflow.DeleteLoggedModelTag.Response" +
+      "\"`\362\206\031\\\n?\n\006DELETE\022//mlflow/logged-models/" +
+      "{model_id}/tags/{tag_key}\032\004\010\002\020\000\020\003*\027Delet" +
+      "e Logged Model Tag\022\326\001\n\030listLoggedModelAr" +
+      "tifacts\022 .mlflow.ListLoggedModelArtifact" +
+      "s\032).mlflow.ListLoggedModelArtifacts.Resp" +
+      "onse\"m\362\206\031i\nC\n\003GET\0226/mlflow/logged-models" +
+      "/{model_id}/artifacts/directories\032\004\010\002\020\000\020" +
+      "\003* List Artifacts for Logged Models\022\301\001\n\024" +
+      "LogLoggedModelParams\022#.mlflow.LogLoggedM" +
+      "odelParamsRequest\032,.mlflow.LogLoggedMode" +
+      "lParamsRequest.Response\"V\362\206\031R\n5\n\004POST\022\'/" +
+      "mlflow/logged-models/{model_id}/params\032\004" +
+      "\010\002\020\000\020\003*\027Log Logged Model Params\022\260\001\n\rGetA" +
+      "ssessment\022\034.mlflow.GetAssessmentRequest\032" +
+      "%.mlflow.GetAssessmentRequest.Response\"Z" +
+      "\362\206\031V\nB\n\003GET\0225/mlflow/traces/{trace_id}/a" +
+      "ssessments/{assessment_id}\032\004\010\003\020\000\020\003*\016Get " +
+      "Assessment\022\337\001\n\020createAssessment\022\030.mlflow" +
+      ".CreateAssessment\032!.mlflow.CreateAssessm" +
+      "ent.Response\"\215\001\362\206\031\210\001\n>\n\004POST\0220/mlflow/tr" +
+      "aces/{assessment.trace_id}/assessments\032\004" +
+      "\010\003\020\000\020\003\030\350\007\030\356\007\030\014\030\001*:Create an assessment o" +
+      "f a trace or a span within the trace\022\320\001\n" +
+      "\020updateAssessment\022\030.mlflow.UpdateAssessm" +
+      "ent\032!.mlflow.UpdateAssessment.Response\"\177" +
+      "\362\206\031{\nD\n\005PATCH\0225/mlflow/traces/{trace_id}" +
+      "/assessments/{assessment_id}\032\004\010\003\020\000\020\003\030\350\007\030" +
+      "\356\007\030\001*)Update an existing assessment on a" +
+      " trace.\022\261\001\n\020deleteAssessment\022\030.mlflow.De" +
+      "leteAssessment\032!.mlflow.DeleteAssessment" +
+      ".Response\"`\362\206\031\\\nE\n\006DELETE\0225/mlflow/trace" +
+      "s/{trace_id}/assessments/{assessment_id}" +
+      "\032\004\010\003\020\000\020\003*\021Delete Assessment\022\232\001\n\rcreateDa" +
+      "taset\022\025.mlflow.CreateDataset\032\036.mlflow.Cr" +
+      "eateDataset.Response\"R\362\206\031N\n%\n\004POST\022\027/mlf" +
+      "low/datasets/create\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\014\030\001*\031C" +
+      "reate Evaluation Dataset\022\221\001\n\ngetDataset\022" +
+      "\022.mlflow.GetDataset\032\033.mlflow.GetDataset." +
+      "Response\"R\362\206\031N\n*\n\003GET\022\035/mlflow/datasets/" +
+      "{dataset_id}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\026Get Evalua" +
+      "tion Dataset\022\240\001\n\rdeleteDataset\022\025.mlflow." +
+      "DeleteDataset\032\036.mlflow.DeleteDataset.Res" +
+      "ponse\"X\362\206\031T\n-\n\006DELETE\022\035/mlflow/datasets/" +
+      "{dataset_id}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\031Delete Eva" +
+      "luation Dataset\022\335\001\n\030searchEvaluationData" +
+      "sets\022 .mlflow.SearchEvaluationDatasets\032)" +
+      ".mlflow.SearchEvaluationDatasets.Respons" +
+      "e\"t\362\206\031p\n%\n\004POST\022\027/mlflow/datasets/search" +
+      "\032\004\010\003\020\000\n$\n\003GET\022\027/mlflow/datasets/search\032\004" +
+      "\010\003\020\000\020\003\030\350\007\030\001*\032Search Evaluation Datasets\022" +
+      "\251\001\n\016setDatasetTags\022\026.mlflow.SetDatasetTa" +
+      "gs\032\037.mlflow.SetDatasetTags.Response\"^\362\206\031" +
+      "Z\n1\n\005PATCH\022\"/mlflow/datasets/{dataset_id" +
+      "}/tags\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\033Set Evaluation D" +
+      "ataset Tags\022\270\001\n\020deleteDatasetTag\022\030.mlflo" +
+      "w.DeleteDatasetTag\032!.mlflow.DeleteDatase" +
+      "tTag.Response\"g\362\206\031c\n8\n\006DELETE\022(/mlflow/d" +
+      "atasets/{dataset_id}/tags/{key}\032\004\010\003\020\000\020\003\030" +
+      "\350\007\030\272\027\030\001*\035Delete Evaluation Dataset Tag\022\303" +
+      "\001\n\024upsertDatasetRecords\022\034.mlflow.UpsertD" +
+      "atasetRecords\032%.mlflow.UpsertDatasetReco" +
+      "rds.Response\"f\362\206\031b\n3\n\004POST\022%/mlflow/data" +
+      "sets/{dataset_id}/records\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030" +
+      "\001*!Upsert Evaluation Dataset Records\022\326\001\n" +
+      "\027getDatasetExperimentIds\022\037.mlflow.GetDat" +
+      "asetExperimentIds\032(.mlflow.GetDatasetExp" +
+      "erimentIds.Response\"p\362\206\031l\n9\n\003GET\022,/mlflo" +
+      "w/datasets/{dataset_id}/experiment-ids\032\004" +
+      "\010\003\020\000\020\003\030\350\007\030\272\027\030\001*%Get Evaluation Dataset E" +
+      "xperiment IDs\022\212\001\n\016registerScorer\022\026.mlflo" +
+      "w.RegisterScorer\032\037.mlflow.RegisterScorer" +
+      ".Response\"?\362\206\031;\n&\n\004POST\022\030/mlflow/scorers" +
+      "/register\032\004\010\003\020\000\020\001*\017Register Scorer\022y\n\013li" +
+      "stScorers\022\023.mlflow.ListScorers\032\034.mlflow." +
+      "ListScorers.Response\"7\362\206\0313\n!\n\003GET\022\024/mlfl" +
+      "ow/scorers/list\032\004\010\003\020\000\020\001*\014List Scorers\022\232\001" +
+      "\n\022listScorerVersions\022\032.mlflow.ListScorer" +
+      "Versions\032#.mlflow.ListScorerVersions.Res" +
+      "ponse\"C\362\206\031?\n%\n\003GET\022\030/mlflow/scorers/vers" +
+      "ions\032\004\010\003\020\000\020\001*\024List Scorer Versions\022p\n\tge" +
+      "tScorer\022\021.mlflow.GetScorer\032\032.mlflow.GetS" +
+      "corer.Response\"4\362\206\0310\n \n\003GET\022\023/mlflow/sco" +
+      "rers/get\032\004\010\003\020\000\020\001*\nGet Scorer\022\202\001\n\014deleteS" +
+      "corer\022\024.mlflow.DeleteScorer\032\035.mlflow.Del" +
+      "eteScorer.Response\"=\362\206\0319\n&\n\006DELETE\022\026/mlf" +
+      "low/scorers/delete\032\004\010\003\020\000\020\001*\rDelete Score" +
+      "r\022\266\001\n\021getDatasetRecords\022\031.mlflow.GetData" +
+      "setRecords\032\".mlflow.GetDatasetRecords.Re" +
+      "sponse\"b\362\206\031^\n2\n\003GET\022%/mlflow/datasets/{d" +
+      "ataset_id}/records\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\036Get " +
+      "Evaluation Dataset Records\022\315\001\n\027addDatase" +
+      "tToExperiments\022\037.mlflow.AddDatasetToExpe" +
+      "riments\032(.mlflow.AddDatasetToExperiments" +
+      ".Response\"g\362\206\031c\n;\n\004POST\022-/mlflow/dataset" +
+      "s/{dataset_id}/add-experiments\032\004\010\003\020\000\020\003\030\350" +
+      "\007\030\272\027\030\001*\032Add Dataset to Experiments\022\344\001\n\034r" +
+      "emoveDatasetFromExperiments\022$.mlflow.Rem" +
+      "oveDatasetFromExperiments\032-.mlflow.Remov" +
+      "eDatasetFromExperiments.Response\"o\362\206\031k\n>" +
+      "\n\004POST\0220/mlflow/datasets/{dataset_id}/re" +
+      "move-experiments\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\037Remove" +
+      " Dataset from Experiments\022\245\001\n\023createGate" +
+      "waySecret\022\033.mlflow.CreateGatewaySecret\032$" +
+      ".mlflow.CreateGatewaySecret.Response\"K\362\206" +
+      "\031G\n,\n\004POST\022\036/mlflow/gateway/secrets/crea" +
+      "te\032\004\010\003\020\000\020\001*\025Create Gateway Secret\022\246\001\n\024ge" +
+      "tGatewaySecretInfo\022\034.mlflow.GetGatewaySe" +
+      "cretInfo\032%.mlflow.GetGatewaySecretInfo.R" +
+      "esponse\"I\362\206\031E\n(\n\003GET\022\033/mlflow/gateway/se" +
+      "crets/get\032\004\010\003\020\000\020\001*\027Get Gateway Secret In" +
+      "fo\022\245\001\n\023updateGatewaySecret\022\033.mlflow.Upda" +
+      "teGatewaySecret\032$.mlflow.UpdateGatewaySe" +
+      "cret.Response\"K\362\206\031G\n,\n\004POST\022\036/mlflow/gat" +
+      "eway/secrets/update\032\004\010\003\020\000\020\001*\025Update Gate" +
+      "way Secret\022\247\001\n\023deleteGatewaySecret\022\033.mlf" +
+      "low.DeleteGatewaySecret\032$.mlflow.DeleteG" +
+      "atewaySecret.Response\"M\362\206\031I\n.\n\006DELETE\022\036/" +
+      "mlflow/gateway/secrets/delete\032\004\010\003\020\000\020\001*\025D" +
+      "elete Gateway Secret\022\252\001\n\026listGatewaySecr" +
+      "etInfos\022\036.mlflow.ListGatewaySecretInfos\032" +
+      "\'.mlflow.ListGatewaySecretInfos.Response" +
+      "\"G\362\206\031C\n)\n\003GET\022\034/mlflow/gateway/secrets/l" +
+      "ist\032\004\010\003\020\000\020\001*\024List Gateway Secrets\022\257\001\n\025cr" +
+      "eateGatewayEndpoint\022\035.mlflow.CreateGatew" +
+      "ayEndpoint\032&.mlflow.CreateGatewayEndpoin" +
+      "t.Response\"O\362\206\031K\n.\n\004POST\022 /mlflow/gatewa" +
+      "y/endpoints/create\032\004\010\003\020\000\020\001*\027Create Gatew" +
+      "ay Endpoint\022\237\001\n\022getGatewayEndpoint\022\032.mlf" +
+      "low.GetGatewayEndpoint\032#.mlflow.GetGatew" +
+      "ayEndpoint.Response\"H\362\206\031D\n*\n\003GET\022\035/mlflo" +
+      "w/gateway/endpoints/get\032\004\010\003\020\000\020\001*\024Get Gat" +
+      "eway Endpoint\022\257\001\n\025updateGatewayEndpoint\022" +
+      "\035.mlflow.UpdateGatewayEndpoint\032&.mlflow." +
+      "UpdateGatewayEndpoint.Response\"O\362\206\031K\n.\n\004" +
+      "POST\022 /mlflow/gateway/endpoints/update\032\004" +
+      "\010\003\020\000\020\001*\027Update Gateway Endpoint\022\261\001\n\025dele" +
+      "teGatewayEndpoint\022\035.mlflow.DeleteGateway" +
+      "Endpoint\032&.mlflow.DeleteGatewayEndpoint." +
+      "Response\"Q\362\206\031M\n0\n\006DELETE\022 /mlflow/gatewa" +
+      "y/endpoints/delete\032\004\010\003\020\000\020\001*\027Delete Gatew" +
+      "ay Endpoint\022\250\001\n\024listGatewayEndpoints\022\034.m" +
+      "lflow.ListGatewayEndpoints\032%.mlflow.List" +
+      "GatewayEndpoints.Response\"K\362\206\031G\n+\n\003GET\022\036" +
+      "/mlflow/gateway/endpoints/list\032\004\010\003\020\000\020\001*\026" +
+      "List Gateway Endpoints\022\324\001\n\034createGateway" +
+      "ModelDefinition\022$.mlflow.CreateGatewayMo" +
+      "delDefinition\032-.mlflow.CreateGatewayMode" +
+      "lDefinition.Response\"_\362\206\031[\n6\n\004POST\022(/mlf" +
+      "low/gateway/model-definitions/create\032\004\010\003" +
+      "\020\000\020\001*\037Create Gateway Model Definition\022\304\001" +
+      "\n\031getGatewayModelDefinition\022!.mlflow.Get" +
+      "GatewayModelDefinition\032*.mlflow.GetGatew" +
+      "ayModelDefinition.Response\"X\362\206\031T\n2\n\003GET\022" +
+      "%/mlflow/gateway/model-definitions/get\032\004" +
+      "\010\003\020\000\020\001*\034Get Gateway Model Definition\022\315\001\n" +
+      "\033listGatewayModelDefinitions\022#.mlflow.Li" +
+      "stGatewayModelDefinitions\032,.mlflow.ListG" +
+      "atewayModelDefinitions.Response\"[\362\206\031W\n3\n" +
+      "\003GET\022&/mlflow/gateway/model-definitions/" +
+      "list\032\004\010\003\020\000\020\001*\036List Gateway Model Definit" +
+      "ions\022\324\001\n\034updateGatewayModelDefinition\022$." +
+      "mlflow.UpdateGatewayModelDefinition\032-.ml" +
+      "flow.UpdateGatewayModelDefinition.Respon" +
+      "se\"_\362\206\031[\n6\n\004POST\022(/mlflow/gateway/model-" +
+      "definitions/update\032\004\010\003\020\000\020\001*\037Update Gatew" +
+      "ay Model Definition\022\326\001\n\034deleteGatewayMod" +
+      "elDefinition\022$.mlflow.DeleteGatewayModel" +
+      "Definition\032-.mlflow.DeleteGatewayModelDe" +
+      "finition.Response\"a\362\206\031]\n8\n\006DELETE\022(/mlfl" +
+      "ow/gateway/model-definitions/delete\032\004\010\003\020" +
+      "\000\020\001*\037Delete Gateway Model Definition\022\305\001\n" +
+      "\025attachModelToEndpoint\022$.mlflow.AttachMo" +
+      "delToGatewayEndpoint\032-.mlflow.AttachMode" +
+      "lToGatewayEndpoint.Response\"W\362\206\031S\n5\n\004POS" +
+      "T\022\'/mlflow/gateway/endpoints/models/atta" +
+      "ch\032\004\010\003\020\000\020\001*\030Attach Model to Endpoint\022\315\001\n" +
+      "\027detachModelFromEndpoint\022&.mlflow.Detach" +
+      "ModelFromGatewayEndpoint\032/.mlflow.Detach" +
+      "ModelFromGatewayEndpoint.Response\"Y\362\206\031U\n" +
+      "5\n\004POST\022\'/mlflow/gateway/endpoints/model" +
+      "s/detach\032\004\010\003\020\000\020\001*\032Detach Model from Endp" +
+      "oint\022\306\001\n\025createEndpointBinding\022$.mlflow." +
+      "CreateGatewayEndpointBinding\032-.mlflow.Cr" +
+      "eateGatewayEndpointBinding.Response\"X\362\206\031" +
+      "T\n7\n\004POST\022)/mlflow/gateway/endpoints/bin" +
+      "dings/create\032\004\010\003\020\000\020\001*\027Create Endpoint Bi" +
+      "nding\022\310\001\n\025deleteEndpointBinding\022$.mlflow" +
+      ".DeleteGatewayEndpointBinding\032-.mlflow.D" +
+      "eleteGatewayEndpointBinding.Response\"Z\362\206" +
+      "\031V\n9\n\006DELETE\022)/mlflow/gateway/endpoints/" +
+      "bindings/delete\032\004\010\003\020\000\020\001*\027Delete Endpoint" +
+      " Binding\022\277\001\n\024listEndpointBindings\022#.mlfl" +
+      "ow.ListGatewayEndpointBindings\032,.mlflow." +
+      "ListGatewayEndpointBindings.Response\"T\362\206" +
+      "\031P\n4\n\003GET\022\'/mlflow/gateway/endpoints/bin" +
+      "dings/list\032\004\010\003\020\000\020\001*\026List Endpoint Bindin" +
+      "gs\022\261\001\n\025setGatewayEndpointTag\022\035.mlflow.Se" +
+      "tGatewayEndpointTag\032&.mlflow.SetGatewayE" +
+      "ndpointTag.Response\"Q\362\206\031M\n/\n\004POST\022!/mlfl" +
+      "ow/gateway/endpoints/set-tag\032\004\010\003\020\000\020\001*\030Ga" +
+      "teway Set Endpoint Tag\022\302\001\n\030deleteGateway" +
+      "EndpointTag\022 .mlflow.DeleteGatewayEndpoi" +
+      "ntTag\032).mlflow.DeleteGatewayEndpointTag." +
+      "Response\"Y\362\206\031U\n4\n\006DELETE\022$/mlflow/gatewa" +
+      "y/endpoints/delete-tag\032\004\010\003\020\000\020\001*\033Gateway " +
+      "Delete Endpoint Tag\022\320\001\n\033createPromptOpti" +
+      "mizationJob\022#.mlflow.CreatePromptOptimiz" +
+      "ationJob\032,.mlflow.CreatePromptOptimizati" +
+      "onJob.Response\"^\362\206\031Z\n.\n\004POST\022 /mlflow/pr" +
+      "ompt-optimization/jobs\032\004\010\003\020\000\020\001\030\350\007\030\272\027\030\001*\036" +
+      "Create Prompt Optimization Job\022\314\001\n\030getPr" +
+      "omptOptimizationJob\022 .mlflow.GetPromptOp" +
+      "timizationJob\032).mlflow.GetPromptOptimiza" +
+      "tionJob.Response\"c\362\206\031_\n6\n\003GET\022)/mlflow/p" +
+      "rompt-optimization/jobs/{job_id}\032\004\010\003\020\000\020\001" +
+      "\030\350\007\030\272\027\030\001*\033Get Prompt Optimization Job\022\220\002" +
+      "\n\034searchPromptOptimizationJobs\022$.mlflow." +
+      "SearchPromptOptimizationJobs\032-.mlflow.Se" +
+      "archPromptOptimizationJobs.Response\"\232\001\362\206" +
+      "\031\225\001\n5\n\004POST\022\'/mlflow/prompt-optimization" +
+      "/jobs/search\032\004\010\003\020\000\n4\n\003GET\022\'/mlflow/promp" +
+      "t-optimization/jobs/search\032\004\010\003\020\000\020\001\030\350\007\030\001*" +
+      "\037Search Prompt Optimization Jobs\022\343\001\n\033can" +
+      "celPromptOptimizationJob\022#.mlflow.Cancel" +
+      "PromptOptimizationJob\032,.mlflow.CancelPro" +
+      "mptOptimizationJob.Response\"q\362\206\031m\n>\n\004POS" +
+      "T\0220/mlflow/prompt-optimization/jobs/{job" +
+      "_id}/cancel\032\004\010\003\020\000\020\001\030\350\007\030\272\027\030\353\007\030\001*\036Cancel P" +
+      "rompt Optimization Job\022\333\001\n\033deletePromptO" +
+      "ptimizationJob\022#.mlflow.DeletePromptOpti" +
+      "mizationJob\032,.mlflow.DeletePromptOptimiz" +
+      "ationJob.Response\"i\362\206\031e\n9\n\006DELETE\022)/mlfl" +
+      "ow/prompt-optimization/jobs/{job_id}\032\004\010\003" +
+      "\020\000\020\001\030\350\007\030\272\027\030\001*\036Delete Prompt Optimization" +
+      " JobB\036\n\024org.mlflow.api.proto\220\001\001\342?\002\020\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -258799,8 +262838,32 @@ public final class Service {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_CreatePromptOptimizationJob_Response_descriptor,
         new java.lang.String[] { "Job", });
-    internal_static_mlflow_CancelPromptOptimizationJob_descriptor =
+    internal_static_mlflow_GetPromptOptimizationJob_descriptor =
       getDescriptor().getMessageTypes().get(142);
+    internal_static_mlflow_GetPromptOptimizationJob_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_mlflow_GetPromptOptimizationJob_descriptor,
+        new java.lang.String[] { "JobId", });
+    internal_static_mlflow_GetPromptOptimizationJob_Response_descriptor =
+      internal_static_mlflow_GetPromptOptimizationJob_descriptor.getNestedTypes().get(0);
+    internal_static_mlflow_GetPromptOptimizationJob_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_mlflow_GetPromptOptimizationJob_Response_descriptor,
+        new java.lang.String[] { "Job", });
+    internal_static_mlflow_SearchPromptOptimizationJobs_descriptor =
+      getDescriptor().getMessageTypes().get(143);
+    internal_static_mlflow_SearchPromptOptimizationJobs_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_mlflow_SearchPromptOptimizationJobs_descriptor,
+        new java.lang.String[] { "ExperimentId", });
+    internal_static_mlflow_SearchPromptOptimizationJobs_Response_descriptor =
+      internal_static_mlflow_SearchPromptOptimizationJobs_descriptor.getNestedTypes().get(0);
+    internal_static_mlflow_SearchPromptOptimizationJobs_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_mlflow_SearchPromptOptimizationJobs_Response_descriptor,
+        new java.lang.String[] { "Jobs", });
+    internal_static_mlflow_CancelPromptOptimizationJob_descriptor =
+      getDescriptor().getMessageTypes().get(144);
     internal_static_mlflow_CancelPromptOptimizationJob_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_CancelPromptOptimizationJob_descriptor,
@@ -258811,6 +262874,18 @@ public final class Service {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_CancelPromptOptimizationJob_Response_descriptor,
         new java.lang.String[] { "Job", });
+    internal_static_mlflow_DeletePromptOptimizationJob_descriptor =
+      getDescriptor().getMessageTypes().get(145);
+    internal_static_mlflow_DeletePromptOptimizationJob_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_mlflow_DeletePromptOptimizationJob_descriptor,
+        new java.lang.String[] { "JobId", });
+    internal_static_mlflow_DeletePromptOptimizationJob_Response_descriptor =
+      internal_static_mlflow_DeletePromptOptimizationJob_descriptor.getNestedTypes().get(0);
+    internal_static_mlflow_DeletePromptOptimizationJob_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_mlflow_DeletePromptOptimizationJob_Response_descriptor,
+        new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.databricks.api.proto.databricks.Databricks.enumValueVisibility);

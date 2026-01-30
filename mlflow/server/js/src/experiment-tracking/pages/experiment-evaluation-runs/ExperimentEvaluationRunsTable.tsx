@@ -13,6 +13,7 @@ import { getEvalRunCellValueBasedOnColumn } from './ExperimentEvaluationRunsTabl
 import type { RunEntityOrGroupData } from './ExperimentEvaluationRunsPage.utils';
 import type { ExperimentEvaluationRunsPageMode } from './hooks/useExperimentEvaluationRunsPageMode';
 import { useExperimentEvaluationRunsRowVisibility } from './hooks/useExperimentEvaluationRunsRowVisibility';
+import { shouldEnableImprovedEvalRunsComparison } from '../../../common/utils/FeatureUtils';
 
 export interface ExperimentEvaluationRunsTableProps {
   data: RunEntityOrGroupData[];
@@ -55,7 +56,9 @@ export const ExperimentEvaluationRunsTable = forwardRef<HTMLDivElement, Experime
     const { isRowHidden } = useExperimentEvaluationRunsRowVisibility();
 
     const columns = useMemo(() => {
-      const allColumns = getExperimentEvalRunsDefaultColumns(viewMode);
+      const allColumns = getExperimentEvalRunsDefaultColumns(viewMode, {
+        showCheckbox: shouldEnableImprovedEvalRunsComparison(),
+      });
 
       // add a column for each available metric
       uniqueColumns.forEach((column) => {
@@ -108,6 +111,13 @@ export const ExperimentEvaluationRunsTable = forwardRef<HTMLDivElement, Experime
         },
         getRowCanExpand: (row) => Boolean(row.subRows?.length),
         onExpandedChange: setExpandedRows,
+        enableRowSelection: (row) => {
+          // Groups are not selectable
+          if ('subRuns' in row.original) {
+            return false;
+          }
+          return true;
+        },
         meta: {
           setSelectedRunUuid,
           setSelectedDatasetWithRun,
