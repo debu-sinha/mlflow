@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 600" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#495057"/>
+    </marker>
+    <marker id="arrow2-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0ca678"/>
+    </marker>
+    <marker id="arrow2-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c92a2a"/>
+    </marker>
+  </defs>
+
+  <text x="510" y="32" font-size="22" fill="#1971c2" text-anchor="middle" font-weight="600">Proposed Execution Model (Phase 2)</text>
+  <text x="510" y="58" font-size="13" fill="#868e96" text-anchor="middle">Gating scorers run first sequentially per row. LLM judges only run if all gates pass.</text>
+
+  <!-- Step 1: eval_data row -->
+  <rect x="420" y="90" width="180" height="56" rx="8" fill="#1864ab" stroke="#1864ab"/>
+  <text x="510" y="118" font-size="14" fill="#f8f9fa" text-anchor="middle" font-weight="600">eval_data row</text>
+  <text x="510" y="136" font-size="11" fill="#dbe4ff" text-anchor="middle">inputs, outputs, expectations, trace</text>
+
+  <line x1="510" y1="146" x2="510" y2="172" stroke="#495057" stroke-width="2" fill="none" marker-end="url(#arrow2)"/>
+
+  <!-- Step 2: Stage 1 gates container (centered) -->
+  <rect x="240" y="180" width="540" height="120" rx="8" fill="#087f5b" fill-opacity="0.18" stroke="#087f5b" stroke-width="2"/>
+  <text x="260" y="204" font-size="13" fill="#0ca678" font-weight="600">Stage 1: Gating scorers (sequential, per row, gate=True)</text>
+
+  <rect x="260" y="216" width="120" height="36" rx="6" fill="#087f5b" stroke="#087f5b"/>
+  <text x="320" y="240" font-size="12" fill="#f8f9fa" text-anchor="middle" font-weight="600">JsonValidity</text>
+
+  <rect x="400" y="216" width="120" height="36" rx="6" fill="#087f5b" stroke="#087f5b"/>
+  <text x="460" y="240" font-size="12" fill="#f8f9fa" text-anchor="middle" font-weight="600">IsNotEmpty</text>
+
+  <rect x="540" y="216" width="140" height="36" rx="6" fill="#087f5b" stroke="#087f5b"/>
+  <text x="610" y="240" font-size="12" fill="#f8f9fa" text-anchor="middle" font-weight="600">ContainsKeywords</text>
+
+  <rect x="260" y="258" width="160" height="36" rx="6" fill="#087f5b" stroke="#087f5b"/>
+  <text x="340" y="282" font-size="12" fill="#f8f9fa" text-anchor="middle" font-weight="600">LengthBound</text>
+
+  <text x="630" y="282" font-size="11" fill="#0ca678" font-style="italic">microseconds per gate</text>
+
+  <line x1="510" y1="300" x2="510" y2="326" stroke="#495057" stroke-width="2" fill="none" marker-end="url(#arrow2)"/>
+
+  <!-- Step 3: Decision diamond (centered) -->
+  <polygon points="510,332 620,386 510,440 400,386" fill="#fab005" stroke="#fab005" stroke-width="2"/>
+  <text x="510" y="382" font-size="14" fill="#212529" text-anchor="middle" font-weight="600">all gates</text>
+  <text x="510" y="400" font-size="14" fill="#212529" text-anchor="middle" font-weight="600">passed?</text>
+
+  <!-- YES path: right -->
+  <line x1="620" y1="386" x2="760" y2="386" stroke="#0ca678" stroke-width="2" fill="none" marker-end="url(#arrow2-green)"/>
+  <text x="690" y="378" font-size="13" fill="#0ca678" text-anchor="middle" font-weight="700">YES</text>
+
+  <!-- NO path: left -->
+  <line x1="400" y1="386" x2="260" y2="386" stroke="#c92a2a" stroke-width="2" fill="none" marker-end="url(#arrow2-red)"/>
+  <text x="330" y="378" font-size="13" fill="#c92a2a" text-anchor="middle" font-weight="700">NO</text>
+
+  <!-- Stage 2: LLM judges (right side, YES path) -->
+  <rect x="760" y="338" width="240" height="100" rx="8" fill="#c92a2a" fill-opacity="0.14" stroke="#c92a2a" stroke-width="2"/>
+  <text x="780" y="360" font-size="12" fill="#e8590c" font-weight="600">Stage 2: LLM judges</text>
+  <text x="780" y="376" font-size="11" fill="#868e96">parallel via ThreadPoolExecutor</text>
+
+  <rect x="780" y="386" width="100" height="36" rx="6" fill="#c92a2a" stroke="#c92a2a"/>
+  <text x="830" y="410" font-size="12" fill="#f8f9fa" text-anchor="middle" font-weight="600">Correctness</text>
+
+  <rect x="890" y="386" width="90" height="36" rx="6" fill="#c92a2a" stroke="#c92a2a"/>
+  <text x="935" y="410" font-size="12" fill="#f8f9fa" text-anchor="middle" font-weight="600">Safety</text>
+
+  <!-- Short-circuit (left side, NO path) -->
+  <rect x="20" y="338" width="240" height="100" rx="8" fill="#868e96" fill-opacity="0.18" stroke="#868e96" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="40" y="360" font-size="12" fill="#495057" font-weight="600">Short-circuit: LLM scorers skipped</text>
+  <text x="40" y="376" font-size="11" fill="#868e96">Feedback(value=False) recorded</text>
+
+  <rect x="40" y="386" width="100" height="36" rx="6" fill="#dee2e6" stroke="#868e96" stroke-dasharray="4 4"/>
+  <text x="90" y="410" font-size="11" fill="#495057" text-anchor="middle">Correctness</text>
+  <text x="92" y="424" font-size="9" fill="#868e96" text-anchor="middle">(skipped)</text>
+
+  <rect x="150" y="386" width="90" height="36" rx="6" fill="#dee2e6" stroke="#868e96" stroke-dasharray="4 4"/>
+  <text x="195" y="410" font-size="11" fill="#495057" text-anchor="middle">Safety</text>
+  <text x="195" y="424" font-size="9" fill="#868e96" text-anchor="middle">(skipped)</text>
+
+  <!-- Down arrows to final aggregation -->
+  <line x1="880" y1="438" x2="710" y2="520" stroke="#495057" stroke-width="2" fill="none" marker-end="url(#arrow2)"/>
+  <line x1="140" y1="438" x2="310" y2="520" stroke="#495057" stroke-width="2" fill="none" marker-end="url(#arrow2)"/>
+
+  <!-- Final aggregation block -->
+  <rect x="300" y="528" width="420" height="52" rx="8" fill="#12b886" stroke="#12b886"/>
+  <text x="510" y="552" font-size="14" fill="#212529" text-anchor="middle" font-weight="600">Per-row Feedback aggregation</text>
+  <text x="510" y="570" font-size="11" fill="#0b5345" text-anchor="middle">gate results + LLM judge results OR skip rationale</text>
+</svg>
